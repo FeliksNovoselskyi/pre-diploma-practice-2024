@@ -1,0 +1,74 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'auth_reg/css/reg.css' %}">
+    <link rel="stylesheet" href="{% static 'auth_reg/css/auth_and_reg.css' %}">
+    <script src="{% static 'auth_reg/js/auth_reg.js' %}" defer></script>
+{% endblock %}
+
+{% block content %}
+    <style>
+        body{
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+            no-repeat center/100% url("{% static 'auth_reg/img/bg.png' %}");
+        }
+    </style>
+
+    <div class="sign-in-block reg">
+        <div class="sign-link-block">
+            <p class="header-text">Створити акаунт</p>
+            <div class="an-page-link-block">
+                <p class="small-text">Вже є акаунт?</p>
+                <a href="{% url 'auth_page' %}" class="small-text link">Увійти</a>
+            </div>
+        </div>
+
+        <div class="form-block reg">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="form-fields-div">
+                    <div class="form-input-div">
+                        <p class="typed-text">Ваше ім'я</p>
+                        <input type="text" name="username" class="form-input typed-text">
+                    </div>
+
+                    <div class="form-input-div">
+                        <p class="typed-text">Ваше прізвище</p>
+                        <input type="text" name="surname" class="form-input typed-text">
+                    </div>
+
+                    <div class="form-input-div">
+                        <p class="typed-text">Ваш номер телефону</p>
+                        <input type="text" name="phone" class="form-input typed-text">
+                    </div>
+
+                    <div class="form-input-div">
+                        <p class="typed-text">Ваша пошта</p>
+                        <input type="email" name="email" class="form-input typed-text">
+                    </div>
+
+                    <div class="form-input-div">
+                        <div class="input-placeholder-password">
+                            <p class="typed-text">Ваш пароль</p>
+                            <div class="show-hide-checkbox">
+                                <input type="checkbox" class="show-hide-btn">
+                                <div class="show-hide-img-div">
+                                    <img src="{% static 'auth_reg/img/show.png' %}" alt="show_hide" class="show-hide-img">
+                                </div>
+                            </div>
+                        </div>
+                        <input type="password" name="password" class="form-input password typed-text">
+                    </div>
+                </div>
+
+                {% if error %}
+                    <p class="typed-text error">{{error}}</p>
+                {% endif %}
+
+
+                <input type="submit" value="Підтвердити" class="submit-btn typed-text">
+            </form>
+        </div>
+    </div>
+{% endblock %}

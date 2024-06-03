@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'main/css/base.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    {% block links %}
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <a href="{% url 'main_page' %}">main</a>
+        <a href="{% url 'services_page' %}">services</a>
+        <a href="{% url 'consultations_page' %}">consultations</a>
+        <a href="{% url 'contacts_page' %}">contacts</a>
+        <a href="{% url 'auth_page' %}">authorization</a>
+        <a href="{% url 'reg_page' %}">registration</a>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        
+    </footer>
+</body>
+</html>

@@ -1,0 +1,136 @@
+.typed-text.error {
+    color: rgb(253, 63, 63);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-text.link {
+    color: black;
+    text-decoration: solid;
+}
+
+.small-text.link:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.form-input {
+    border: 1.5px solid rgba(80, 80, 80, 1);
+    border-radius: 12px;
+}
+
+.submit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 418px;
+    padding: 20px 50px;
+    background-color: #D8ECF3;
+    border: 0 transparent;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.submit-btn:hover {
+    color: white;
+    background-color: #8BC7DA;
+}
+
+.form-input-div {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 0px;
+    width: 438px;
+}
+
+.input-placeholder-password {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-input {
+    height: 50px;
+}
+
+.an-page-link-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.sign-link-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-in-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.form-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-block form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.form-fields-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-in-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 658px;
+    gap: 15px;
+    padding: 75px;
+    border-radius: 24px;
+    box-shadow: 0px 0px 30px black;
+}
+
+.sign-in-block.reg {
+    padding: 15px 75px;
+}
+
+.form-block.reg form {
+    gap: 5px;
+}
+
+.show-hide-img {
+    width: 30px;
+    height: 30px;
+}
+
+.show-hide-btn{
+    border: transparent;
+    background: transparent;
+}
+
+.show-hide-checkbox {display: flex;}
