@@ -2,7 +2,6 @@
 {% load static %}
 
 {% block links %}
-    <link rel="stylesheet" href="{% static 'auth_reg/css/auth.css' %}">
     <link rel="stylesheet" href="{% static 'auth_reg/css/auth_and_reg.css' %}">
     <script src="{% static 'auth_reg/js/auth_reg.js' %}" defer></script>
 {% endblock %}
@@ -12,6 +11,7 @@
         body{
             background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
             no-repeat center/100% url("{% static 'auth_reg/img/bg.png' %}");
+            overflow-y: hidden;
         }
     </style>
 

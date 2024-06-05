@@ -2,14 +2,6 @@
     font-family: "Montserrat", sans-serif;
 }
 
-.header-text {
-    font-size: 32px;
-}
-
-.typed-text {
-    font-size: 18px;
-}
-
-.small-text {
-    font-size: 16px;
-}
+.header-text {font-size: 32px;}
+.typed-text {font-size: 18px;}
+.small-text {font-size: 16px;}

@@ -1,3 +1,10 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .typed-text.error {
     color: rgb(253, 63, 63);
 }
@@ -45,8 +52,8 @@ main {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    gap: 0px;
     width: 438px;
+    line-height: 0%;
 }
 
 .input-placeholder-password {
@@ -71,8 +78,10 @@ main {
 .sign-link-block {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    line-height: 0%;
+    gap: 0;
 }
 
 .sign-in-block {
@@ -86,6 +95,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    line-height: 0%;
 }
 
 .form-block form {
@@ -93,7 +103,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .form-fields-div {
@@ -110,13 +120,13 @@ main {
     align-items: center;
     width: 658px;
     gap: 15px;
-    padding: 75px;
+    padding: 20px;
     border-radius: 24px;
     box-shadow: 0px 0px 30px black;
 }
 
 .sign-in-block.reg {
-    padding: 15px 75px;
+    padding: 10px 50px;
 }
 
 .form-block.reg form {
@@ -134,3 +144,25 @@ main {
 }
 
 .show-hide-checkbox {display: flex;}
+
+.hints{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    color: #666666;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    background-color: #b0b0b0;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 0%;
+}
+
+.password-hints {
+    width: 438px;
+}
