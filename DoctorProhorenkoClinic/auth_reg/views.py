@@ -2,10 +2,16 @@ from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.db.utils import IntegrityError
-
+from main.models import *
 # Create your views here.
 def auth_view(request):
-    context = {} 
+    context = {}
+    
+    logo = Icons.objects.get(id=1)
+    service_arrow = Icons.objects.get(id=2)
+    
+    context["logo"] = logo
+    context["service_arrow"] = service_arrow
     
     if request.user.is_authenticated:
         context['username'] = request.user.username
@@ -33,6 +39,12 @@ def auth_view(request):
 
 def reg_view(request):
     context = {}
+    
+    logo = Icons.objects.get(id=1)
+    service_arrow = Icons.objects.get(id=2)
+    
+    context["logo"] = logo
+    context["service_arrow"] = service_arrow
     
     if request.method == 'POST':
         username = request.POST.get('username')

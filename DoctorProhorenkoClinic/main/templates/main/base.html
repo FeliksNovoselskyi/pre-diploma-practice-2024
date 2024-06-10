@@ -11,17 +11,50 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
+    <script src="{% static 'main/js/base.js' %}" defer></script>
+
     {% block links %}
     {% endblock %}
 </head>
 <body>
     <header>
-        <a href="{% url 'main_page' %}">main</a>
+        {% if logo %}
+            <img src="{{logo.image.url}}" alt="logo" id="logo">
+        {% endif %}
+
+        <div class="links">
+            <a href="{% url 'main_page' %}" class="link">Головна</a>
+            
+            <div id="service-link">
+                <p>Послуги</p>
+                {% if service_arrow %}
+                    <img src="{{service_arrow.image.url}}" alt="service-arrow">
+                {% endif %}
+            </div>
+            
+            <div class="services-menu">
+                <p class="small-text">Онкодерматологія</p>
+                <p class="small-text">Кріодеструксія</p>
+                <p class="small-text">Мезотерапія</p>
+                <p class="small-text">Консультація</p>
+            </div>
+
+
+            <a href="{% url 'contacts_page' %}" class="link">Контакти</a>
+        </div>
+
+        <div class="links">
+            <a href="{% url 'auth_page' %}" class="link">Увійти</a>
+            <button>Записатись</button>
+        </div>
+
+
+        <!-- <a href="{% url 'main_page' %}">main</a>
         <a href="{% url 'services_page' %}">services</a>
         <a href="{% url 'consultations_page' %}">consultations</a>
         <a href="{% url 'contacts_page' %}">contacts</a>
         <a href="{% url 'auth_page' %}">authorization</a>
-        <a href="{% url 'reg_page' %}">registration</a>
+        <a href="{% url 'reg_page' %}">registration</a> -->
     </header>
 
     <main>

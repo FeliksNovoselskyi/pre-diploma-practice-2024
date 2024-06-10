@@ -9,17 +9,6 @@ main {
     color: rgb(253, 63, 63);
 }
 
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.small-text.link {
-    color: black;
-    text-decoration: solid;
-}
-
 .small-text.link:hover {
     color: black;
     text-decoration: underline;
