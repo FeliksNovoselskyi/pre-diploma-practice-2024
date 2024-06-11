@@ -23,38 +23,43 @@
         {% endif %}
 
         <div class="links">
-            <a href="{% url 'main_page' %}" class="link">Головна</a>
+            <a href="{% url 'main_page' %}" class="link header-text">Головна</a>
             
             <div id="service-link">
-                <p>Послуги</p>
+                <p class="header-text">Послуги</p>
                 {% if service_arrow %}
                     <img src="{{service_arrow.image.url}}" alt="service-arrow">
                 {% endif %}
             </div>
             
-            <div class="services-menu">
-                <p class="small-text">Онкодерматологія</p>
-                <p class="small-text">Кріодеструксія</p>
-                <p class="small-text">Мезотерапія</p>
-                <p class="small-text">Консультація</p>
-            </div>
 
 
-            <a href="{% url 'contacts_page' %}" class="link">Контакти</a>
+            <a href="{% url 'contacts_page' %}" class="link header-text">Контакти</a>
         </div>
 
         <div class="links">
-            <a href="{% url 'auth_page' %}" class="link">Увійти</a>
+            {% if not signed_in %}
+                {% if show_sign_in %}
+                    <a href="{% url 'auth_page' %}" class="link header-text">Увійти</a>
+                {% endif %}
+            {% endif %}
+
+            {% if signed_in %}
+                {% if show_sign_in %}
+                    {% if username %}
+                        <a href="{% url 'auth_page' %}" class="link">{{username}}</a>
+                    {% endif %}
+                {% endif %}
+            {% endif %}
             <button>Записатись</button>
         </div>
 
-
-        <!-- <a href="{% url 'main_page' %}">main</a>
-        <a href="{% url 'services_page' %}">services</a>
-        <a href="{% url 'consultations_page' %}">consultations</a>
-        <a href="{% url 'contacts_page' %}">contacts</a>
-        <a href="{% url 'auth_page' %}">authorization</a>
-        <a href="{% url 'reg_page' %}">registration</a> -->
+        <div class="services-menu">
+            <a href="{% url 'service_first_page' %}" class="link">Онкодерматологія</a>
+            <a href="{% url 'service_second_page' %}" class="link">Кріодеструкція</a>
+            <a href="{% url 'service_third_page' %}" class="link">Мезотерапія</a>
+            <a href="{% url 'consultation_page' %}" class="link">Консультація</a>
+        </div>
     </header>
 
     <main>
@@ -62,8 +67,74 @@
         {% endblock %}
     </main>
 
-    <footer>
-        
-    </footer>
+    {% if show_footer %}
+        <footer>
+            <div id="footer-links-block">
+                <div class="footer-info-text">
+                    <p class="footer-h">Меню</p>
+                    <div class="footer-links menu">
+
+                        <a href="{% url 'main_page' %}" class="footer-link">Головна</a>
+
+                        <div id="service-link-footer">
+                            <p class="footer-link">Послуги</p>
+                            {% if service_arrow_footer %}
+                                <img src="{{service_arrow_footer.image.url}}" alt="service-arrow-footer">
+                            {% endif %}
+                        </div>
+
+                        <a href="{% url 'contacts_page' %}" class="footer-link">Контакти</a>
+                    </div>
+                </div>
+
+                <div class="footer-info-text">
+                    <p class="footer-h">Зв'язок</p>
+                    <div class="footer-links">
+                        <p class="footer-p">Інна Прохоренко</p>
+
+                        <div class="linkage">
+                            {% if phone %}
+                                <img src="{{phone.image.url}}" alt="phone" class="footer-icons">
+                            {% endif %}
+                            <p class="footer-p">+380 97 517 63 83</p>
+                        </div>
+                        
+                        <div class="linkage">
+                            {% if location %}
+                                <img src="{{location.image.url}}" alt="location" class="footer-icons">
+                            {% endif %}
+                            <p class="footer-p">м. Дніпро вул. Сімферопольська 2к</p>
+                        </div>
+                        
+                        <div class="linkage">
+                            {% if email %}
+                                <img src="{{email.image.url}}" alt="email" class="footer-icons">
+                            {% endif %}
+                            <p class="footer-p">...@gmail.com</p>
+                        </div>
+                        
+                        <div class="linkage">
+                            {% if instagram %}
+                                <img src="{{instagram.image.url}}" alt="instagram" class="footer-icons">
+                            {% endif %}
+                            <p class="footer-p">Інстаграм</p>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="services-menu-footer">
+                    <a href="{% url 'service_first_page' %}" class="link">Онкодерматологія</a>
+                    <a href="{% url 'service_second_page' %}" class="link">Кріодеструкція</a>
+                    <a href="{% url 'service_third_page' %}" class="link">Мезотерапія</a>
+                    <a href="{% url 'consultation_page' %}" class="link">Консультація</a>
+                </div>
+            </div>
+
+            {% if logo %}
+                <img src="{{logo.image.url}}" alt="logo" id="footer-logo">
+            {% endif %}
+        </footer>
+    {% endif %}
 </body>
 </html>

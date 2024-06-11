@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'services',
-    'consultations',
     'contacts',
     'auth_reg',
 ]

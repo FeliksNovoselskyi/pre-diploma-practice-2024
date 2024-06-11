@@ -20,15 +20,16 @@ from django.conf.urls.static import static
 from .settings import DEBUG, MEDIA_URL, MEDIA_ROOT
 from main.views import *
 from services.views import *
-from consultations.views import *
 from contacts.views import *
 from auth_reg.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main_view, name='main_page'),
-    path('services/', services_view, name='services_page'),
-    path('consultations/', consultations_view, name='consultations_page'),
+    path('service1/', service_first_view, name='service_first_page'),
+    path('service2/', service_second_view, name='service_second_page'),
+    path('service3/', service_third_view, name='service_third_page'),
+    path('consultation/', service_consultations_view, name='consultation_page'),
     path('contacts/', contacts_view, name='contacts_page'),
     path('auth/', auth_view, name='auth_page'),
     path('reg/', reg_view, name='reg_page'),
