@@ -21,6 +21,14 @@ def main_view(request):
     mezoter = BackgroundImages.objects.get(id=12)
     prices_background = BackgroundImages.objects.get(id=14)
     
+    location_slide = BackgroundImages.objects.get(id=5)
+    fast_service_slide = BackgroundImages.objects.get(id=3)
+    kids_consultation_slide = BackgroundImages.objects.get(id=4)
+
+    doctor_photo = BackgroundImages.objects.get(id=13)
+    about_doctor_bg = BackgroundImages.objects.get(id=15)
+    consultations_bg = BackgroundImages.objects.get(id=2)
+    
     context["logo"] = logo
     context["main_page_logo"] = main_page_logo
     context["service_arrow"] = service_arrow
@@ -37,6 +45,15 @@ def main_view(request):
     context["kriodest"] = kriodest
     context["mezoter"] = mezoter
     context["prices_background"] = prices_background
+    
+    context["location_slide"] = location_slide
+    context["fast_service_slide"] = fast_service_slide
+    context["kids_consultation_slide"] = kids_consultation_slide
+
+    context["doctor_photo"] = doctor_photo
+    context["about_doctor_bg"] = about_doctor_bg
+
+    context["consultations_bg"] = consultations_bg
     
     context['show_footer'] = True
     context['show_sign_in'] = True

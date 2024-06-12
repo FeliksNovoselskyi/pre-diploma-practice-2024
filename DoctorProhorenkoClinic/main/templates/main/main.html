@@ -6,6 +6,27 @@
 {% endblock %}
 
 {% block content %}
+    <style>
+        .carousel-item {
+            height: 700px;
+        }
+
+        .carousel-caption {
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            height: fit-content;
+        }
+
+        .carousel-caption h5 {
+            font-size: 48px;
+        }
+
+        .carousel-caption p {
+            font-size: 18px;
+        }
+    </style>
+
     {% if main_page %}
         <div id="main-block" style="background: no-repeat center/100% url('{{main_page.image.url}}');">
             <div id="header-info-block">
@@ -83,6 +104,153 @@
                     {% endif %}
                     <h2 class="prices-header-text">Мезотерапія</h2>
                     <p class="prices-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                {% if location_slide %}
+                    <img src="{{location_slide.image.url}}" class="d-block w-100" alt="location-slide">
+                {% endif %}
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Локація</h5>
+                    <p>У самому центрі міста</p>
+                    <a href="{% url 'contacts_page' %}"><button class="light-btn">Детальніше</button></a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                {% if fast_service_slide %}
+                    <img src="{{fast_service_slide.image.url}}" class="d-block w-100" alt="fast-service-slide">
+                {% endif %}
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Швидкий сервіс</h5>
+                    <p>Швидке та зручне обслуговування</p>
+                    <a href="{% url 'service_first_page' %}"><button class="light-btn">Детальніше</button></a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                {% if kids_consultation_slide %}
+                    <img src="{{kids_consultation_slide.image.url}}" class="d-block w-100" alt="kids-consultation-slide">
+                {% endif %}
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Дитячі консультації</h5>
+                    <p>Можливість провести консультацію з вашою дитиною</p>
+                    <a href="{% url 'consultation_page' %}"><button class="light-btn">Детальніше</button></a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    {% if about_doctor_bg %}
+        <div id="doctor-info" style="background: no-repeat center/100% url('{{about_doctor_bg.image.url}}');">
+            <div id="about-doctor">
+                {% if doctor_photo %}
+                    <img src="{{doctor_photo.image.url}}" alt="about-doctor" id="about-doctor-img">
+                {% endif %}
+
+                <div id="name-specialty">
+                    <div id="name-text">
+                        <h2 class="header-text specialty">Прохоренко Інна Валеріївна</h2>
+                        <p>Лікар першої категорії із досвідом роботи понад 11 років</p>
+                    </div>
+
+                    <div id="specialty-list">
+                        <div class="hints">
+                            <span class="dot"></span>
+                            <p class="hints-text">Дерматовенеролог</p>
+                        </div>
+                        <div class="hints">
+                            <span class="dot"></span>
+                            <p class="hints-text">Дерматолог - онколог</p>
+                        </div>
+                        <div class="hints">
+                            <span class="dot"></span>
+                            <p class="hints-text">Трихолог</p>
+                        </div>
+                        <div class="hints">
+                            <span class="dot"></span>
+                            <p class="hints-text">Подолог</p>
+                        </div>
+                        <div class="hints">
+                            <span class="dot"></span>
+                            <p class="hints-text">Косметолог</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sertificates">
+                <div id="sertificates-text">
+                    <div id="sertificates-h">
+                        <h1>Навчання</h1>
+                        <h1>Досвід</h1>
+                        <h1>Сертифікати</h1>
+                    </div>
+
+                    <div id="sertificates-info-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                            Soluta dolorem optio voluptatibus facere rerum fugiat deleniti eos officia inventore</p>
+                        <a href="#"><button class="dark-btn">Переглянути</button></a>
+                    </div>
+                </div>
+
+                <div id="sertificates-gallery">
+                    <div class="sertificate-block">
+                        <div class="temporarily-img"></div>
+                        <div class="temporarily-img"></div>
+                        <div class="temporarily-img"></div>
+                        <div class="temporarily-img"></div>
+                    </div>
+
+                    <div class="sertificate-block">
+                        <div class="temporarily-img"></div>
+                        <div class="temporarily-img"></div>
+                        <div class="temporarily-img"></div>
+                        <div class="temporarily-img"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+    {% if consultations_bg %}
+        <div id="consultation-block" style="background: no-repeat center/100% url('{{consultations_bg.image.url}}');">
+            <div id="main-text">
+                <div id="consultation-text">
+                    <h1>Консультації</h1>
+                    <p>Різноманітні консультації для усіх вікових груп</p>
+                </div>
+                <a href="{% url 'consultation_page' %}"><button class="light-btn">Переглянути</button></a>
+            </div>
+
+            <div id="consultation-types">
+                <div class="c-type">
+                    <h2>Нутріциолога</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="c-type">
+                    <h2>Дерматолога</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="c-type">
+                    <h2>Трихолога</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
             </div>
         </div>

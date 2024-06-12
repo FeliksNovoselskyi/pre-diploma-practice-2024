@@ -23,8 +23,9 @@ body {
 .small-text {
     font-size: 14px;
     line-height: 0%;
+    margin-bottom: 0;
 }
-.header-text {
+.header-links-text {
     font-size: 21px;
     line-height: 0%;
 }
@@ -55,7 +56,12 @@ header #logo{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
+}
+
+#service-link p.header-links-text {
+    margin-bottom: 0;
 }
 
 #service-link p {
@@ -190,6 +196,10 @@ footer {
     color: #9B9B9B;
     text-decoration: solid;
     font-size: 20px;
+}
+
+#service-link-footer p.footer-link {
+    margin-bottom: 0;
 }
 
 #footer-logo {
