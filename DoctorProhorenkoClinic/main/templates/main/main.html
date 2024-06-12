@@ -6,5 +6,85 @@
 {% endblock %}
 
 {% block content %}
-    <p>main</p>
+    {% if main_page %}
+        <div id="main-block" style="background: no-repeat center/100% url('{{main_page.image.url}}');">
+            <div id="header-info-block">
+                <div id="logo-text">
+                    {% if main_page_logo %}
+                        <img src="{{main_page_logo.image.url}}" alt="main-page-logo" id="main-page-logo">
+                        <h1 class="main-page h1">
+                            <span>Клініка</span>
+                            <span>Доктора</span>
+                            <span>"Прохоренко"</span>
+                        </h1>
+                    {% endif %}
+                </div>
+
+                <div id="clinic-info">
+                    <p class="typed-text main-page parag">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Tenetur exercitationem consequatur, dolores, et architecto pariatur iste, nisi nam at dicta deserunt? 
+                        Reiciendis et mollitia consequatur libero ipsum error ad deserunt.</p>
+                </div>
+            </div>
+
+            <div id="footer-info-block">
+                <div class="doctor-specialty">
+                    <h2 class="main-page">Інтергативний лікар</h2>
+                    <p class="typed-text main-page parag">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="doctor-specialty">
+                    <h2 class="main-page">Трихолог</h2>
+                    <p class="typed-text main-page parag">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="doctor-specialty">
+                    <h2 class="main-page">Дерматолог</h2>
+                    <p class="typed-text main-page parag">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="doctor-specialty">
+                    <h2 class="main-page">Нутрициолог</h2>
+                    <p class="typed-text main-page parag">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    
+    {% if prices_background %}
+        <div id="prices-block" style="background: no-repeat center/100% url('{{prices_background.image.url}}');">
+            <h1 id="prices-header">Прайси та пропозиції</h1>
+            <div id="prices-cards">
+                <div class="main-price-card">
+                    {% if onkoderm %}
+                        <a href="{% url 'service_first_page' %}"><img src="{{onkoderm.image.url}}" alt="onkoderm" class="price-card-img"></a>
+                        <div class="price-image-hover">
+                            <p class="header-text">Переглянути</p>
+                        </div>
+                    {% endif %}
+                    <h2 class="prices-header-text">Онкодерматологія</h2>
+                    <p class="prices-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+
+                <div class="main-price-card">
+                    {% if kriodest %}
+                        <a href="{% url 'service_second_page' %}"><img src="{{kriodest.image.url}}" alt="kriodest" class="price-card-img"></a>
+                        <div class="price-image-hover">
+                            <p class="header-text">Переглянути</p>
+                        </div>
+                    {% endif %}
+                    <h2 class="prices-header-text">Кріодеструкція</h2>
+                    <p class="prices-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+
+                <div class="main-price-card">
+                    {% if mezoter %}
+                        <a href="{% url 'service_third_page' %}"><img src="{{mezoter.image.url}}" alt="mezoter" class="price-card-img"></a>
+                        <div class="price-image-hover">
+                            <p class="header-text">Переглянути</p>
+                        </div>
+                    {% endif %}
+                    <h2 class="prices-header-text">Мезотерапія</h2>
+                    <p class="prices-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+    {% endif %}
 {% endblock %}

@@ -4,3 +4,7 @@ from django.db import models
 class Icons(models.Model):
     name = models.CharField(max_length=255)
     image = models.ImageField()
+    
+class BackgroundImages(models.Model):
+    name = models.CharField(max_length=255)
+    image = models.ImageField()

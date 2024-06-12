@@ -1,0 +1,138 @@
+.main-page {
+    color: #FFFF;
+}
+
+.main-page.h1 {
+    display: flex;
+    flex-direction: column;
+    font-size: 48px;
+    gap: 5px;
+    text-align: left;
+}
+
+#main-block {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    box-shadow: 0 0 20px #000;
+    position: relative;
+    z-index: 8;
+}
+
+#header-info-block {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 40px 50px;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 24px;
+    box-shadow: 0 0 20px #000;
+}
+
+#logo-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+}
+
+#footer-info-block {
+    display: flex;
+    flex-direction: row;
+    padding: 30px 50px;
+    gap: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 24px;
+    border: 1px solid #D5D5D5;
+    box-shadow: 0 0 20px #000;
+}
+
+#main-page-logo {
+    width: 200px;
+    height: 200px;
+}
+
+.main-page.parag {
+    line-height: 100%;
+}
+
+#clinic-info p {
+    width: 500px;
+}
+
+.doctor-specialty {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: center;
+}
+
+#prices-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    z-index: 6;
+}
+
+#prices-cards {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 10px;
+}
+
+.price-card-img {
+    width: 360px;
+    height: 325px;
+    border-radius: 18px;
+}
+
+.price-image-hover {
+    position: absolute;
+    top: 0;
+    margin-left: 0;
+    width: 360px;
+    height: 325px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFFF;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.main-price-card:hover .price-image-hover {
+    opacity: 1;
+}
+
+.prices-text {
+    font-size: 24px;
+    color: #787878;
+}
+
+.prices-header-text {
+    font-size: 32px;
+    font-weight: 450;
+}
+
+.main-price-card {
+    width: 390px;
+    position: relative;
+}
+
+#prices-header {
+    font-size: 48px;
+    font-weight: 600;
+}
+
