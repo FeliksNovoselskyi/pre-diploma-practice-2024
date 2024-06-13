@@ -6,5 +6,75 @@
 {% endblock %}
 
 {% block content %}
-    <p>Онкодерматологія</p>
+    {% if onkoderm_page_image %}
+        <div id="block-consultations" style="background: no-repeat center/100% url('{{onkoderm_page_image.image.url}}');">
+            <div id="text-block">
+                <h1 style="font-size: 48px;">Онкодерматологія</h1>
+                <h2 style="font-size: 18px;">Спеціалізується на раку шкіри</h2>
+            </div>
+        </div>
+        {% if service_bg_image %}
+            <div id="main-text-block" style="background: url('{{service_bg_image.image.url}}');">
+                <div class="available-prices">
+                    <div class="available-prices-head">
+                        <h1 id="head">Наявні прайси</h1>
+                    </div>
+                    <div class="available-prices-text service-text">
+                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br>
+                            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.  <br>
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. <br>
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. <br>
+                            Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. <br>
+                        </p>
+                    </div>
+                </div>
+                <div class="prices-main">
+                    <div class="prices">
+                        <h1 id="head">Ціни</h1>
+                        <div class="prices-table">
+                            <table>
+                                {% for service1 in all_service1 %}
+                                    <tr>
+                                        <td><div class="text">{{service1.name}}
+                                        </div></td>
+                                        <td><div class="price">{{service1.price}}</div></td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="for-need">
+                    <div>
+                        <h1 id="head">Для чого це потрібно</h1>
+                    </div>
+                    <div class="for-need-text">
+                        <p class="for-need-text1 service-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br>
+                        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.  <br>
+                        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. <br>
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. <br>
+                        Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. <br>
+                     </p>
+                    </div>
+                </div>
+                <div class="advantages">
+                    <div>
+                        <h1 id="head">Які переваги</h1>
+                    </div>
+                    <div class="advantages-text">
+                        <p class="advantages-text1 service-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br>
+                            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.  <br>
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. <br>
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. <br>
+                            Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. <br></p>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        <div class="sign">
+            <p style="font-size: 24px;">Запишіться на прийом, якщо маєте потребу у наших послугах</p>
+            <a href="#" class="s"><button class="button-start">Записатись</button></a>
+        </div>
+    {% endif %}
 {% endblock %}

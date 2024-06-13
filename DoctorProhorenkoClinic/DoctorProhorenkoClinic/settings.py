@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'services',
     'contacts',
     'auth_reg',
+    'sertificates',
 ]
 
 MIDDLEWARE = [

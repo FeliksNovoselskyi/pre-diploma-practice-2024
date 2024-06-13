@@ -14,6 +14,11 @@ def service_first_view(request):
     instagram = Icons.objects.get(id=5)
     phone = Icons.objects.get(id=6)
     
+    onkoderm_page_image = BackgroundImages.objects.get(id=7)
+    service_bg_image = BackgroundImages.objects.get(id=19)
+    
+    all_service1 = Service1.objects.all()
+    
     context["logo"] = logo
     context["service_arrow"] = service_arrow
     context["service_arrow_footer"] = service_arrow_footer
@@ -22,6 +27,11 @@ def service_first_view(request):
     context["email"] = email
     context["instagram"] = instagram
     context["phone"] = phone
+    
+    context["onkoderm_page_image"] = onkoderm_page_image
+    context["service_bg_image"] = service_bg_image
+    
+    context["all_service1"] = all_service1
     
     context['show_footer'] = True
     context['show_sign_in'] = True
@@ -43,6 +53,11 @@ def service_second_view(request):
     instagram = Icons.objects.get(id=5)
     phone = Icons.objects.get(id=6)
     
+    kriodestruction_page_image = BackgroundImages.objects.get(id=8)
+    service_bg_image = BackgroundImages.objects.get(id=19)
+    
+    all_service2 = Service2.objects.all()
+    
     context["logo"] = logo
     context["service_arrow"] = service_arrow
     context["service_arrow_footer"] = service_arrow_footer
@@ -51,6 +66,11 @@ def service_second_view(request):
     context["email"] = email
     context["instagram"] = instagram
     context["phone"] = phone
+    
+    context["kriodestruction_page_image"] = kriodestruction_page_image
+    context["service_bg_image"] = service_bg_image
+    
+    context["all_service2"] = all_service2
     
     context['show_footer'] = True
     context['show_sign_in'] = True
@@ -72,6 +92,11 @@ def service_third_view(request):
     instagram = Icons.objects.get(id=5)
     phone = Icons.objects.get(id=6)
     
+    mezoterapia_page_image = BackgroundImages.objects.get(id=6)
+    service_bg_image = BackgroundImages.objects.get(id=19)
+    
+    all_service3 = Service3.objects.all()
+    
     context["logo"] = logo
     context["service_arrow"] = service_arrow
     context["service_arrow_footer"] = service_arrow_footer
@@ -80,6 +105,11 @@ def service_third_view(request):
     context["email"] = email
     context["instagram"] = instagram
     context["phone"] = phone
+    
+    context["mezoterapia_page_image"] = mezoterapia_page_image
+    context["service_bg_image"] = service_bg_image
+    
+    context["all_service3"] = all_service3
     
     context['show_footer'] = True
     context['show_sign_in'] = True

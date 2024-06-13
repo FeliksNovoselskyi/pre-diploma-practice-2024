@@ -1,0 +1,53 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'sertificates/css/sertificates.css' %}">
+{% endblock %}
+
+{% block content %}
+    {% if sertificates_page_image %}
+        <div id="block-sertificates" style="background: no-repeat center/100% url('{{sertificates_page_image.image.url}}');">
+            <div id="text-block">
+                <h1 style="font-size: 48px;">Сертифікати</h1>
+                <h2 style="font-size: 18px;">Підтверджують якість та надійність</h2>
+            </div>
+        </div>
+
+        {% if sertificates_bg_image %}
+            <div id="sertificate-main-block" style="background: url('{{sertificates_bg_image.image.url}}');">
+                <div class="sertificate">
+                    <div class="temporarily-img-sertificate left"></div>
+
+                    <div class="sertificate-text">
+                        <h2>Сертифікат Української асоціації лікарів-дерматовенерологів і косметологів</h2>
+                    </div>
+                </div>
+
+                <div class="sertificate">
+                    <div class="sertificate-text">
+                        <h2>Сертифікат Всеукраїнської асоціації трихологів</h2>
+                    </div>
+                    <div class="temporarily-img-sertificate right"></div>
+                </div>
+
+                <div class="sertificate">
+                    <div class="temporarily-img-sertificate left"></div>
+
+                    <div class="sertificate-text">
+                        <h2>Сертифікат лікаря - спеціаліста</h2>
+                    </div>
+                </div>
+
+                <div class="sertificate">
+                    <div class="sertificate-text">
+                        <h2>Сертифікат учасника регіональної науково-практичної конференції
+                            “Прикарпатські дермотовенерологічні дні: Сучасні аспекти реформування
+                            дерматовенерологічної служби”</h2>
+                    </div>
+                    <div class="temporarily-img-sertificate right"></div>
+                </div>
+            </div>
+        {% endif %}
+    {% endif %}
+{% endblock %}

@@ -22,6 +22,7 @@ from main.views import *
 from services.views import *
 from contacts.views import *
 from auth_reg.views import *
+from sertificates.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,6 +32,7 @@ urlpatterns = [
     path('service3/', service_third_view, name='service_third_page'),
     path('consultation/', service_consultations_view, name='consultation_page'),
     path('contacts/', contacts_view, name='contacts_page'),
+    path('sertificates/', sertificates_view, name='sertificates_page'),
     path('auth/', auth_view, name='auth_page'),
     path('reg/', reg_view, name='reg_page'),
 ]
