@@ -25,7 +25,6 @@ def main_view(request):
     fast_service_slide = BackgroundImages.objects.get(id=3)
     kids_consultation_slide = BackgroundImages.objects.get(id=4)
 
-    doctor_photo = BackgroundImages.objects.get(id=13)
     about_doctor_bg = BackgroundImages.objects.get(id=15)
     consultations_bg = BackgroundImages.objects.get(id=2)
     
@@ -50,7 +49,6 @@ def main_view(request):
     context["fast_service_slide"] = fast_service_slide
     context["kids_consultation_slide"] = kids_consultation_slide
 
-    context["doctor_photo"] = doctor_photo
     context["about_doctor_bg"] = about_doctor_bg
 
     context["consultations_bg"] = consultations_bg
