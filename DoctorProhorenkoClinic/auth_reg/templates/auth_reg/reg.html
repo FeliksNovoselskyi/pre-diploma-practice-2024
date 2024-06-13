@@ -13,6 +13,22 @@
             no-repeat center/100% url("{% static 'auth_reg/img/bg.png' %}");
             /* overflow-y: hidden; */
         }
+
+        .show-hide-btn {
+            appearance: none;
+        }
+
+        .check_box {
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: no-repeat center/100% url("{% static 'auth_reg/img/hide.png' %}");
+            cursor: pointer;
+        }
+
+        .show-hide-btn:checked + .check_box {
+            background: no-repeat center/100% url("{% static 'auth_reg/img/show.png' %}");
+        }
     </style>
 
     <div class="sign-in-block reg">
@@ -51,12 +67,10 @@
                     <div class="form-input-div">
                         <div class="input-placeholder-password">
                             <p class="typed-text">Ваш пароль</p>
-                            <div class="show-hide-checkbox">
+                            <label class="check">
                                 <input type="checkbox" class="show-hide-btn">
-                                <div class="show-hide-img-div">
-                                    <img src="{% static 'auth_reg/img/show.png' %}" alt="show_hide" class="show-hide-img">
-                                </div>
-                            </div>
+                                <span class="check_box"></span>
+                            </label>
                         </div>
                         <input type="password" name="password" class="form-input password typed-text">
                     </div>

@@ -6,7 +6,7 @@ const sMenuFooter = document.querySelector('.services-menu-footer')
 
 sLink.addEventListener('click', () => {
     const linkObj = sLink.getBoundingClientRect()
-
+    
     sMenu.classList.toggle('show-s-menu')
     sMenu.style.top = linkObj.bottom + 'px'
     sMenu.style.left = linkObj.left + 'px'
@@ -16,8 +16,8 @@ sLinkFooter.addEventListener('click', () => {
     const linkObjFooter = sLinkFooter.getBoundingClientRect()
     
     sMenuFooter.classList.toggle('show-s-menu-footer')
-    sMenuFooter.style.top = linkObjFooter.bottom + 'px'
-    sMenuFooter.style.left = linkObjFooter.left + 'px'
+    sMenuFooter.style.top = (linkObjFooter.bottom + window.scrollY) + 'px';
+    sMenuFooter.style.left = (linkObjFooter.left + window.scrollX) + 'px';
 });
 
 document.addEventListener('click', (event) => {

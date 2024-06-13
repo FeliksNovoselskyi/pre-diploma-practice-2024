@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from main.models import *
+from .models import *
 
 # Create your views here.
 def service_first_view(request):
@@ -100,6 +101,11 @@ def service_consultations_view(request):
     instagram = Icons.objects.get(id=5)
     phone = Icons.objects.get(id=6)
     
+    consultations_page_image = BackgroundImages.objects.get(id=9)
+    consultations_bg_image = BackgroundImages.objects.get(id=14)
+    
+    all_consultations = Consultations.objects.all()
+    
     context["logo"] = logo
     context["service_arrow"] = service_arrow
     context["service_arrow_footer"] = service_arrow_footer
@@ -108,6 +114,11 @@ def service_consultations_view(request):
     context["email"] = email
     context["instagram"] = instagram
     context["phone"] = phone
+    
+    context["consultations_page_image"] = consultations_page_image
+    context["consultations_bg_image"] = consultations_bg_image
+    
+    context["all_consultations"] = all_consultations
     
     context['show_footer'] = True
     context['show_sign_in'] = True

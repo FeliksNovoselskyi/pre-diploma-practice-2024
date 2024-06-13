@@ -123,18 +123,6 @@ main {
     gap: 5px;
 }
 
-.show-hide-img {
-    width: 30px;
-    height: 30px;
-}
-
-.show-hide-btn{
-    border: transparent;
-    background: transparent;
-}
-
-.show-hide-checkbox {display: flex;}
-
 .hints{
     display: flex;
     flex-direction: row;

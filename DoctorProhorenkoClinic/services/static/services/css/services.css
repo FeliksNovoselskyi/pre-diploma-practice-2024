@@ -1,3 +1,246 @@
-/* p {
-    color: rebeccapurple;
-} */
+.service-text {
+    color: #666666;
+    font-size: 18px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 0 40px 0;
+
+}
+
+#main-block-consultations{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    box-shadow: 0 0 20px #000;
+    position: relative;
+    z-index: 8;
+}
+.p{
+    color: #666666;
+}
+
+#block-consultations{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 680px;
+    box-shadow: 0 4px 30px #000;
+    z-index: 8;
+}
+
+#text-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+    gap: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 24px;
+    border: 1px solid #C0C0C0;
+    box-shadow: 0 0 20px #000;
+    width: 546px;
+    color: white;
+}
+
+#main-text-block{
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.available-prices{
+    display: flex;
+    margin-top: 50px;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.available-prices-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.available-prices-text{
+    max-width: 650px;
+    margin-top: 30px;
+}
+
+.prices-main{
+    display: flex;
+    justify-content: center;
+}
+.prices-table{
+    padding-top: 20px;
+}
+
+.prices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+table {
+    width: 100%;
+    border-collapse: separate; /* Використовуйте separate замість collapse для border-radius */
+    border-spacing: 0; /* Видаляє проміжки між клітинками */
+    border: 1px solid #000000;
+    border-radius: 10px; /* Заокруглені кути для всієї таблиці */
+    overflow: hidden; /* Необхідно для заокруглених кутів */
+}
+th, td {
+    border: 1px solid #000000;
+}
+th {
+    background-color: #f2f2f2;
+}
+/* Заокруглення окремих куточків */
+th:first-child {
+    border-top-left-radius: 10px;
+}
+th:last-child {
+    border-top-right-radius: 10px;
+}
+tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+.price {
+    max-width: 150px;
+    display: flex;
+    justify-content: center; 
+    height: 100%;  
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 18px;
+}
+
+.text{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 3px;
+    padding-right: 20px;
+    font-size: 24px;
+}
+
+#head{
+    font-size: 32px;
+}
+
+.need-info-text2{
+    max-width: 700px;
+}
+
+.need-info-text1{
+    max-width: 700px;
+}
+
+.need-info-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.need-info{
+    display: flex;
+    margin-top: 50px;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.for-need{
+    font-size: 18px;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.for-need-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.for-need-text1{
+    max-width: 650px;
+}
+
+.advantages{
+    font-size: 18px;
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.advantages-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.advantages-text1{
+    max-width: 650px;
+}
+
+.button-start{
+    width: 418px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 50px 20px 50px;
+    border-radius: 40px;
+    background-color: #D8ECF3;
+    transition: all 300ms ease-in-out;
+    border: transparent;
+}
+
+.button-start:hover{
+    background-color: #8BC7DA;
+    color: #FFFF;
+}
+
+.s{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 300ms ease-in-out;
+    text-decoration: none;
+}
+
+
+.sign{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #F7FDFE;
+    width: 100%;
+    padding: 40px 0px 40px 0px;
+    backdrop-filter: blur(24px);
+    box-shadow: 0 0 20px #000;
+}

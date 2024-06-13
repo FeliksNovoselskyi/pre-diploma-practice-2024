@@ -131,6 +131,7 @@ header #logo{
     background-color: #FAFEFF;
     line-height: 100%;
     visibility: hidden;
+    /* z-index: 10; */
 }
 
 .show-s-menu-footer {
