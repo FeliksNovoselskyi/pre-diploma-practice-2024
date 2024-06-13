@@ -6,5 +6,58 @@
 {% endblock %}
 
 {% block content %}
-    <p>contacts</p>
+    {% if contacts_map %}
+        <div id="header-info-block" style="background: no-repeat center/100% url('{{contacts_map.image.url}}');"></div>
+
+        {% if contacts_bg_image %}
+            <div id="contacts-info" style="background: no-repeat center/100% url('{{contacts_bg_image.image.url}}');">
+                <h1>Наші контакти</h1>
+                <div id="info-block">
+                    <div id="info-blocks">
+                        <div id="info-b">
+                            {% if contacts_location %}
+                                <img src="{{contacts_location.image.url}}" alt="contacts-location" class="contacts-icon">
+                            {% endif %}
+                            <div class="info-b-text">
+                                <h2>Адреса</h2>
+                                <p>Дніпро. вул Сімферопольська, 2к</p>
+                            </div>
+                        </div>
+
+                        <div id="info-b">
+                            {% if contacts_phone %}
+                                <img src="{{contacts_phone.image.url}}" alt="contacts-phone" class="contacts-icon">
+                            {% endif %}
+                            <div class="info-b-text">
+                                <h2>Телефон</h2>
+                                <p>+380 97 517 63 83</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="info-blocks">
+                        <div id="info-b">
+                            {% if contacts_instagram %}
+                                <img src="{{contacts_instagram.image.url}}" alt="contacts-instagram" class="contacts-icon">
+                            {% endif %}
+                            <div class="info-b-text">
+                                <h2>Інстаграм</h2>
+                                <a href="https://www.instagram.com/dr._prohorenko?utm_source=qr" class="link"><p>@dr._prohorenko</p></a>
+                            </div>
+                        </div>
+
+                        <div id="info-b">
+                            {% if contacts_email %}
+                                <img src="{{contacts_email.image.url}}" alt="contacts-email" class="contacts-icon">
+                            {% endif %}
+                            <div class="info-b-text">
+                                <h2>Пошта</h2>
+                                <p>...@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endif %}
 {% endblock %}

@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.db.utils import IntegrityError
 from main.models import *
+
 # Create your views here.
 def auth_view(request):
     context = {}
@@ -31,6 +32,7 @@ def auth_view(request):
     if request.user.is_authenticated:
         context['username'] = request.user.username
         context['signed_in'] = True
+        context['leave_btn'] = True
     
     if 'join_btn' in request.POST:
         if request.user.is_authenticated:
@@ -43,13 +45,14 @@ def auth_view(request):
                 user = authenticate(username=username, password=password)
                 if user:
                     login(request, user)
+                    return redirect('main_page')
                 else:
                     context['error'] = 'Пошта або пароль невірні'
             else:
                 context['error'] = 'Заповніть усі поля'
     if 'leave_btn' in request.POST:
         logout(request)
-        
+        return redirect('auth_page')
     
     return render(request, 'auth_reg/auth.html', context)
 
@@ -98,6 +101,7 @@ def reg_view(request):
                         email=email,
                         password=password,
                     )
+                    return redirect('auth_page')
                 except IntegrityError:
                     context['error'] = 'Такий користувач вже існує'
             else:

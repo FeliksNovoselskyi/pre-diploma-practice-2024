@@ -1,3 +1,63 @@
-/* p {
-    color: green;
-} */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#header-info-block {
+    width: 100%;
+    height: 615px;
+}
+
+#contacts-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#info-block {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 50px;
+}
+
+#info-blocks {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 50px;
+}
+
+#info-b {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    padding: 5px 0;
+    gap: 10px;
+    line-height: 0%;
+    width: 350px;
+}
+
+.contacts-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.info-b-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-b-text h2 {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.info-b-text p {
+    color: #030303;
+    font-size: 16px;
+}

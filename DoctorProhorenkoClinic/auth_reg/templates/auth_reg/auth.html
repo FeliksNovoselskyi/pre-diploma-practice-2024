@@ -66,7 +66,9 @@
                 {% endif %}
 
                 <input type="submit" value="Підтвердити" name="join_btn" class="submit-btn typed-text">
-                <input type="submit" value="Вийти" name="leave_btn" class="submit-btn typed-text">
+                {% if leave_btn %}
+                    <input type="submit" value="Вийти" name="leave_btn" class="submit-btn typed-text">
+                {% endif %}
             </form>
         </div>
     </div>

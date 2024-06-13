@@ -12,6 +12,15 @@ def contacts_view(request):
     email = Icons.objects.get(id=4)
     instagram = Icons.objects.get(id=5)
     phone = Icons.objects.get(id=6)
+
+    contacts_map = BackgroundImages.objects.get(id=16)
+    
+    contacts_location = Icons.objects.get(id=9)
+    contacts_instagram = Icons.objects.get(id=10)
+    contacts_email = Icons.objects.get(id=11)
+    contacts_phone = Icons.objects.get(id=12)
+    
+    contacts_bg_image = BackgroundImages.objects.get(id=14)
     
     context["logo"] = logo
     context["service_arrow"] = service_arrow
@@ -22,7 +31,16 @@ def contacts_view(request):
     context["instagram"] = instagram
     context["phone"] = phone
     
-    context['show_footer'] = True
+    context["contacts_map"] = contacts_map
+    
+    context["contacts_location"] = contacts_location
+    context["contacts_instagram"] = contacts_instagram
+    context["contacts_email"] = contacts_email
+    context["contacts_phone"] = contacts_phone
+
+    context["contacts_bg_image"] = contacts_bg_image
+    
+    context['show_footer'] = False
     context['show_sign_in'] = True
     
     if request.user.is_authenticated:
