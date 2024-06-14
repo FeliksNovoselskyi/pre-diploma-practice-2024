@@ -60,13 +60,13 @@ header #logo{
     cursor: pointer;
 }
 
-#service-link p.header-links-text {
-    margin-bottom: 0;
-}
+#service-arrow-header{transition: all 300ms ease-in-out;}
 
-#service-link p {
-    user-select: none;
-}
+#service-link:hover #service-arrow-header {rotate: 90deg;}
+
+#service-link p.header-links-text {margin-bottom: 0;}
+
+#service-link p {user-select: none;}
 
 #service-link img {
     width: 21px;
@@ -80,9 +80,11 @@ header #logo{
     cursor: pointer;
 }
 
-#service-link-footer p {
-    user-select: none;
-}
+#service-arrow-footer {transition: all 300ms ease-in-out;}
+
+#service-link-footer:hover #service-arrow-footer {rotate: 90deg;}
+
+#service-link-footer p {user-select: none;}
 
 #service-link-footer img {
     width: 21px;
@@ -167,9 +169,7 @@ footer {
     flex-direction: column;
 }
 
-.footer-links.menu{
-    gap: 10px;
-}
+.footer-links.menu{gap: 10px;}
 
 .linkage {
     display: flex;
@@ -199,9 +199,7 @@ footer {
     font-size: 20px;
 }
 
-#service-link-footer p.footer-link {
-    margin-bottom: 0;
-}
+#service-link-footer p.footer-link {margin-bottom: 0;}
 
 #footer-logo {
     width: 200px;
