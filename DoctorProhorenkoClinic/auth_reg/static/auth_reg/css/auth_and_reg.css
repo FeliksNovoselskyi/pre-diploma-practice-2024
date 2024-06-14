@@ -17,6 +17,7 @@ main {
 .form-input {
     border: 1.5px solid rgba(80, 80, 80, 1);
     border-radius: 12px;
+    height: 35px;
 }
 
 .submit-btn {
@@ -50,10 +51,6 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-}
-
-.form-input {
-    height: 35px;
 }
 
 .an-page-link-block {

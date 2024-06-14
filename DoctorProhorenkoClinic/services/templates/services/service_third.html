@@ -6,6 +6,47 @@
 {% endblock %}
 
 {% block content %}
+    <style>
+        .form-input-div {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            width: 438px;
+            line-height: 0%;
+        }
+
+        .form-input {
+            border: 1.5px solid rgba(80, 80, 80, 1);
+            border-radius: 12px;
+            height: 35px;
+        }
+
+        .submit-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 418px;
+            padding: 30px 50px;
+            background-color: #D8ECF3;
+            border: 0 transparent;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: all 300ms ease-in-out;
+        }
+
+        .submit-btn:hover {
+            color: white;
+            background-color: #8BC7DA;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+    </style>
     {% if mezoterapia_page_image %}
         <div id="block-consultations" style="background: no-repeat center/100% url('{{mezoterapia_page_image.image.url}}');">
             <div id="text-block">
@@ -74,7 +115,7 @@
         {% endif %}
         <div class="sign">
             <p style="font-size: 24px;">Запишіться на прийом, якщо маєте потребу у наших послугах</p>
-            <a href="#" class="s"><button class="button-start">Записатись</button></a>
+            <button type="button" class="btn button-start" data-bs-toggle="modal" data-bs-target="#exampleModal">Записатись</button>
         </div>
     {% endif %}
 {% endblock %}
