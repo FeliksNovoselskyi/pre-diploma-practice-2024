@@ -188,6 +188,10 @@ footer {
     color: #9B9B9B;
 }
 
+.footer-p.text {
+    margin-bottom: 0;
+}
+
 .footer-icons {
     width: 25px;
     height: 25px;
@@ -204,4 +208,14 @@ footer {
 #footer-logo {
     width: 200px;
     height: 200px;
+}
+
+#burger-menu-btn {
+    position: sticky;
+    display: none;
+    width: 50px;
+    width: 50px;
+    background-color: transparent;
+    border: transparent;
+    visibility: hidden;
 }

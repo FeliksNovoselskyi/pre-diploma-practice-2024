@@ -30,6 +30,9 @@ def sertificates_view(request):
 
     context["sertificates_bg_image"] = sertificates_bg_image
     
+    burger_menu = Icons.objects.get(id=13)
+    context["burger_menu"] = burger_menu
+    
     context['show_footer'] = True
     context['show_sign_in'] = True
     

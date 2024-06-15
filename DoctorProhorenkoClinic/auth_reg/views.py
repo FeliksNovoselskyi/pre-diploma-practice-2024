@@ -26,6 +26,9 @@ def auth_view(request):
     context["instagram"] = instagram
     context["phone"] = phone
     
+    burger_menu = Icons.objects.get(id=13)
+    context["burger_menu"] = burger_menu
+    
     context['show_footer'] = False
     context['show_sign_in'] = False
     
@@ -76,6 +79,9 @@ def reg_view(request):
     context["email"] = email
     context["instagram"] = instagram
     context["phone"] = phone
+    
+    burger_menu = Icons.objects.get(id=13)
+    context["burger_menu"] = burger_menu
     
     context['show_footer'] = False
     context['show_sign_in'] = True

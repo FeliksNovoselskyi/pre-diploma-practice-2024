@@ -35,6 +35,9 @@ def service_first_view(request):
     
     context["all_service1"] = all_service1
     
+    burger_menu = Icons.objects.get(id=13)
+    context["burger_menu"] = burger_menu
+    
     context['show_footer'] = True
     context['show_sign_in'] = True
     
@@ -85,6 +88,9 @@ def service_second_view(request):
     context["service_bg_image"] = service_bg_image
     
     context["all_service2"] = all_service2
+    
+    burger_menu = Icons.objects.get(id=13)
+    context["burger_menu"] = burger_menu
     
     context['show_footer'] = True
     context['show_sign_in'] = True
@@ -137,6 +143,9 @@ def service_third_view(request):
     
     context["all_service3"] = all_service3
     
+    burger_menu = Icons.objects.get(id=13)
+    context["burger_menu"] = burger_menu
+    
     context['show_footer'] = True
     context['show_sign_in'] = True
     
@@ -187,6 +196,9 @@ def service_consultations_view(request):
     context["consultations_bg_image"] = consultations_bg_image
     
     context["all_consultations"] = all_consultations
+    
+    burger_menu = Icons.objects.get(id=13)
+    context["burger_menu"] = burger_menu
     
     context['show_footer'] = True
     context['show_sign_in'] = True

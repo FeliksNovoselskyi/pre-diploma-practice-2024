@@ -30,6 +30,8 @@ def main_view(request):
     about_doctor_bg = BackgroundImages.objects.get(id=15)
     consultations_bg = BackgroundImages.objects.get(id=2)
     
+    burger_menu = Icons.objects.get(id=13)
+    
     context["logo"] = logo
     context["main_page_logo"] = main_page_logo
     context["service_arrow"] = service_arrow
@@ -54,6 +56,8 @@ def main_view(request):
     context["about_doctor_bg"] = about_doctor_bg
 
     context["consultations_bg"] = consultations_bg
+
+    context["burger_menu"] = burger_menu
     
     context['show_footer'] = True
     context['show_sign_in'] = True
