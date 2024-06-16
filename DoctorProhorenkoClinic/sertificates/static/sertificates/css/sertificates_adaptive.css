@@ -1,0 +1,87 @@
+@media (max-width: 480px) {
+    header {
+        padding: 8px 10px;
+        width: 100%;
+    }
+
+    body {
+        max-width: 480px;
+    }
+
+    header #logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .links {
+        display: none;
+    }
+s
+    #block-sertificates{
+        max-width: 480px;
+        max-height: 480px;
+    }
+
+    #text-block{
+        text-align: center;
+        gap: 10px;
+        padding: 15px 0;
+    }
+
+    #text-block h1 {
+        font-size: 24px;
+    }
+
+    #text-block h2 {
+        font-size: 16px;
+    }
+
+    .sertificate h2{
+        text-align: center;
+    }
+
+    .sertificate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .temporarily-img-sertificate {
+        width: 100%;
+        height: 200px;
+        background-color: #C0C0C0;
+    }
+
+    .temporarily-img-sertificate.left {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    
+    .temporarily-img-sertificate.right {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .sertificate-text {
+        width: 100%;
+    }
+
+    .sertificate-text h2 {
+        font-size: 18px;
+    }
+
+    #sertificate-main-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+
+    #block-sertificates {
+        height: 200px;
+    }
+}

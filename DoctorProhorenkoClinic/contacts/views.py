@@ -30,6 +30,8 @@ def contacts_view(request):
     context["email"] = email
     context["instagram"] = instagram
     context["phone"] = phone
+
+    burger_menu = Icons.objects.get(id=13)
     
     context["contacts_map"] = contacts_map
     
@@ -37,6 +39,7 @@ def contacts_view(request):
     context["contacts_instagram"] = contacts_instagram
     context["contacts_email"] = contacts_email
     context["contacts_phone"] = contacts_phone
+    context["burger_menu"] = burger_menu
 
     context["contacts_bg_image"] = contacts_bg_image
     

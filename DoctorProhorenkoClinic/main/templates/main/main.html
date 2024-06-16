@@ -26,6 +26,11 @@
         .carousel-caption p {
             font-size: 18px;
         }
+
+        @media (max-width: 480px) {
+            .form-input-div {width: 400px;}
+            .submit-btn {width:max-content;}
+        }
     </style>
 
     {% if main_page %}
@@ -43,7 +48,7 @@
                 </div>
 
                 <div id="clinic-info">
-                    <p class="typed-text main-page parag">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    <p class="doctor-specialty-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         Tenetur exercitationem consequatur, dolores, et architecto pariatur iste, nisi nam at dicta deserunt? 
                         Reiciendis et mollitia consequatur libero ipsum error ad deserunt.</p>
                 </div>
@@ -52,26 +57,26 @@
             <div id="footer-info-block">
                 <div class="doctor-specialty">
                     <h2 class="main-page">Інтергативний лікар</h2>
-                    <p class="typed-text main-page parag">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="doctor-specialty-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
                 <div class="doctor-specialty">
                     <h2 class="main-page">Трихолог</h2>
-                    <p class="typed-text main-page parag">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="doctor-specialty-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
                 <div class="doctor-specialty">
                     <h2 class="main-page">Дерматолог</h2>
-                    <p class="typed-text main-page parag">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="doctor-specialty-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
                 <div class="doctor-specialty">
                     <h2 class="main-page">Нутрициолог</h2>
-                    <p class="typed-text main-page parag">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="doctor-specialty-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
             </div>
         </div>
     {% endif %}
     
     {% if prices_background %}
-        <div id="prices-block" style="background: no-repeat center/100% url('{{prices_background.image.url}}');">
+        <div id="prices-block" style="background: url('{{prices_background.image.url}}');">
             <h1 id="prices-header">Послуги клініки</h1>
             <div id="prices-cards">
                 <div class="main-price-card">
@@ -110,7 +115,7 @@
         </div>
     {% endif %}
 
-    <div id="carouselExampleIndicators" class="carousel slide" style="box-shadow:  0 0 30px #000; z-index: 8;">
+    <div id="carouselExampleIndicators" class="carousel slide adaptive-slider" style="box-shadow:  0 0 30px #000; z-index: 8;">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -119,7 +124,7 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 {% if location_slide %}
-                    <img src="{{location_slide.image.url}}" class="d-block w-100" alt="location-slide">
+                    <img src="{{location_slide.image.url}}" class="d-block w-100 adaptive-slider" alt="location-slide">
                 {% endif %}
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Локація</h5>
@@ -129,7 +134,7 @@
             </div>
             <div class="carousel-item">
                 {% if fast_service_slide %}
-                    <img src="{{fast_service_slide.image.url}}" class="d-block w-100" alt="fast-service-slide">
+                    <img src="{{fast_service_slide.image.url}}" class="d-block w-100 adaptive-slider" alt="fast-service-slide">
                 {% endif %}
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Швидкий сервіс</h5>
@@ -139,7 +144,7 @@
             </div>
             <div class="carousel-item">
                 {% if kids_consultation_slide %}
-                    <img src="{{kids_consultation_slide.image.url}}" class="d-block w-100" alt="kids-consultation-slide">
+                    <img src="{{kids_consultation_slide.image.url}}" class="d-block w-100 adaptive-slider" alt="kids-consultation-slide">
                 {% endif %}
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Дитячі консультації</h5>
@@ -148,18 +153,18 @@
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <button class="carousel-control-prev adaptive-slider" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <button class="carousel-control-next adaptive-slider" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
 
     {% if about_doctor_bg %}
-        <div id="doctor-info" style="background: no-repeat center/100% url('{{about_doctor_bg.image.url}}');">
+        <div id="doctor-info" style="background: url('{{about_doctor_bg.image.url}}');">
             <div id="about-doctor">
                 <div id="watch-specialty">
                     <h2>Навчання<br> Досвід</h2>

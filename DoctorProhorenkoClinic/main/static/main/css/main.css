@@ -64,8 +64,10 @@ main {
     height: 200px;
 }
 
-.main-page.parag {
+.doctor-specialty-text {
     line-height: 100%;
+    color: #FFFF;
+    font-size: 16px;
 }
 
 #clinic-info p {
@@ -127,6 +129,7 @@ main {
 #prices-header {
     font-size: 48px;
     font-weight: 600;
+    text-align: center;
 }
 
 .light-btn {
@@ -217,9 +220,10 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width: 100%;
     align-items: center;
-    padding: 10 12.5px;
-    gap: 20px;
+    padding: 10px 12.5px;
+    gap: 10px;
 }
 
 .dark-btn {

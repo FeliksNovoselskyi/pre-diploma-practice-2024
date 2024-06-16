@@ -1,0 +1,42 @@
+@media (max-width: 480px) {
+    header {
+        padding: 8px 10px;
+        width: 100%;
+    }
+
+    body {
+        max-width: 480px;
+    }
+
+    #header-info-block{
+        max-width: 480px;
+        max-height: 200px;
+    }
+
+    header #logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .links {
+        display: none;
+    }
+
+    #burger-menu-btn {
+        display: block;
+        visibility: visible;
+    }
+
+    #info-blocks{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-fields-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }    
+}

@@ -3,6 +3,7 @@
 
 {% block links %}
     <link rel="stylesheet" href="{% static 'auth_reg/css/auth_and_reg.css' %}">
+    <link rel="stylesheet" href="{% static 'auth_reg/css/auth_and_reg_adaptive.css' %}">
     <script src="{% static 'auth_reg/js/auth_reg.js' %}" defer></script>
 {% endblock %}
 
@@ -28,6 +29,12 @@
         .show-hide-btn:checked + .check_box {
             background: no-repeat center/100% url("{% static 'auth_reg/img/show.png' %}");
         }
+
+        @media (max-width: 480px) {
+            .form-input-div {width: 400px;}
+            .submit-btn {width:max-content;}
+        }
+
     </style>
 
     <div class="sign-in-block">

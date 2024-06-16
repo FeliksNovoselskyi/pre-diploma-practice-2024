@@ -1,0 +1,38 @@
+@media (max-width: 480px) {
+    header {
+        padding: 8px 10px;
+        width: 100%;
+    }
+
+    body {
+        max-width: 480px;
+    }
+
+    .sign-in-block{
+        width: 400px;
+
+    }
+
+    header #logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .password-hints{
+        padding-left: 30px;
+        padding-bottom: 10px;
+    }
+
+    .sign-in-block .reg{
+        width: 400px;
+    }
+
+    .sign-in-block {
+        width: 100%;
+        border-radius: 0;
+    }
+}

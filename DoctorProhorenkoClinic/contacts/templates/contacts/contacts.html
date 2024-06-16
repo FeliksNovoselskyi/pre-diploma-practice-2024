@@ -3,14 +3,21 @@
 
 {% block links %}
     <link rel="stylesheet" href="{% static 'contacts/css/contacts.css' %}">
+    <link rel="stylesheet" href="{% static 'contacts/css/contacts_adaptive.css' %}">
 {% endblock %}
 
 {% block content %}
+    <style>
+        @media (max-width: 480px) {
+            .form-input-div {width: 400px;}
+            .submit-btn {width:max-content;}
+        }
+    </style>
     {% if contacts_map %}
         <div id="header-info-block" style="background: no-repeat center/100% url('{{contacts_map.image.url}}');"></div>
 
         {% if contacts_bg_image %}
-            <div id="contacts-info" style="background: no-repeat center/100% url('{{contacts_bg_image.image.url}}');">
+            <div id="contacts-info" style="background: url('{{contacts_bg_image.image.url}}');">
                 <h1>Наші контакти</h1>
                 <div id="info-block">
                     <div id="info-blocks">

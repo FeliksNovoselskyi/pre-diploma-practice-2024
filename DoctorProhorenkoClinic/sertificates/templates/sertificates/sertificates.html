@@ -3,14 +3,21 @@
 
 {% block links %}
     <link rel="stylesheet" href="{% static 'sertificates/css/sertificates.css' %}">
+    <link rel="stylesheet" href="{% static 'sertificates/css/sertificates_adaptive.css' %}">
 {% endblock %}
 
 {% block content %}
+    <style>
+        @media (max-width: 480px) {
+                .form-input-div {width: 400px;}
+                .submit-btn {width:max-content;}
+            }
+    </style>
     {% if sertificates_page_image %}
         <div id="block-sertificates" style="background: no-repeat center/100% url('{{sertificates_page_image.image.url}}');">
             <div id="text-block">
-                <h1 style="font-size: 48px;">Сертифікати</h1>
-                <h2 style="font-size: 18px;">Підтверджують якість та надійність</h2>
+                <h1>Сертифікати</h1>
+                <h2>Підтверджують якість та надійність</h2>
             </div>
         </div>
 
@@ -25,10 +32,10 @@
                 </div>
 
                 <div class="sertificate">
+                    <div class="temporarily-img-sertificate left"></div>
                     <div class="sertificate-text">
                         <h2>Сертифікат Всеукраїнської асоціації трихологів</h2>
                     </div>
-                    <div class="temporarily-img-sertificate right"></div>
                 </div>
 
                 <div class="sertificate">
@@ -40,12 +47,12 @@
                 </div>
 
                 <div class="sertificate">
+                    <div class="temporarily-img-sertificate left"></div>
                     <div class="sertificate-text">
                         <h2>Сертифікат учасника регіональної науково-практичної конференції
                             “Прикарпатські дермотовенерологічні дні: Сучасні аспекти реформування
                             дерматовенерологічної служби”</h2>
                     </div>
-                    <div class="temporarily-img-sertificate right"></div>
                 </div>
             </div>
         {% endif %}
