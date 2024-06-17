@@ -5,8 +5,10 @@ main {
     height: calc(100vh - 115px);
 }
 
-.typed-text.error {
+.error-text {
     color: rgb(253, 63, 63);
+    line-height: 100%;
+    margin-bottom: 0;
 }
 
 .small-text.link:hover {
@@ -82,7 +84,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 
 .form-fields-div {

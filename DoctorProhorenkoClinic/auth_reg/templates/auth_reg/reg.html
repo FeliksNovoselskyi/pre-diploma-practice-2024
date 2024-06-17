@@ -52,22 +52,22 @@
                 <div class="form-fields-div">
                     <div class="form-input-div">
                         <p class="typed-text">Ваше ім'я</p>
-                        <input type="text" name="username" class="form-input typed-text">
+                        <input type="text" name="username" class="form-input typed-text" value="{{username_input}}">
                     </div>
 
                     <div class="form-input-div">
                         <p class="typed-text">Ваше прізвище</p>
-                        <input type="text" name="surname" class="form-input typed-text">
+                        <input type="text" name="surname" class="form-input typed-text" value="{{surname_input}}">
                     </div>
 
                     <div class="form-input-div">
                         <p class="typed-text">Ваш номер телефону</p>
-                        <input type="text" name="phone" class="form-input typed-text">
+                        <input type="text" name="phone" class="form-input typed-text" value="{{phone_input}}">
                     </div>
 
                     <div class="form-input-div">
                         <p class="typed-text">Ваша пошта</p>
-                        <input type="email" name="email" class="form-input typed-text">
+                        <input type="email" name="email" class="form-input typed-text" value="{{email_input}}">
                     </div>
 
                     <div class="form-input-div">
@@ -78,7 +78,7 @@
                                 <span class="check_box"></span>
                             </label>
                         </div>
-                        <input type="password" name="password" class="form-input password typed-text">
+                        <input type="password" name="password" class="form-input password typed-text" value="{{password_input}}">
                     </div>
 
                     <div class="password-hints">
@@ -94,7 +94,7 @@
                 </div>
 
                 {% if error %}
-                    <p class="typed-text error">{{error}}</p>
+                    <p class="error-text">{{error}}</p>
                 {% endif %}
 
 

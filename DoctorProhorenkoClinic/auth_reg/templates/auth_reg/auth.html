@@ -51,8 +51,8 @@
                 {% csrf_token %}
                 <div class="form-fields-div">
                     <div class="form-input-div">
-                        <p class="typed-text">Ваша пошта</p>
-                        <input type="text" name="username" class="form-input typed-text">
+                        <p class="typed-text">Ваше ім'я</p>
+                        <input type="text" name="username" class="form-input typed-text" value="{{username_input}}">
                     </div>
 
                     <div class="form-input-div">
@@ -63,13 +63,13 @@
                                 <span class="check_box"></span>
                             </label>
                         </div>
-                        <input type="password" name="password" class="form-input password typed-text">
+                        <input type="password" name="password" class="form-input password typed-text" value="{{password_input}}">
                         
                     </div>
                 </div>
 
                 {% if error %}
-                    <p class="typed-text error">{{error}}</p>
+                    <p class="error-text">{{error}}</p>
                 {% endif %}
 
                 <input type="submit" value="Підтвердити" name="join_btn" class="submit-btn typed-text">

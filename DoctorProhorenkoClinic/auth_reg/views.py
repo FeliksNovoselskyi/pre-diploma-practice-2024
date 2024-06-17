@@ -12,19 +12,9 @@ def auth_view(request):
     service_arrow = Icons.objects.get(id=2)
     service_arrow_footer = Icons.objects.get(id=7)
     
-    location = Icons.objects.get(id=3)
-    email = Icons.objects.get(id=4)
-    instagram = Icons.objects.get(id=5)
-    phone = Icons.objects.get(id=6)
-    
     context["logo"] = logo
     context["service_arrow"] = service_arrow
     context["service_arrow_footer"] = service_arrow_footer
-    
-    context["location"] = location
-    context["email"] = email
-    context["instagram"] = instagram
-    context["phone"] = phone
     
     burger_menu = Icons.objects.get(id=13)
     context["burger_menu"] = burger_menu
@@ -44,13 +34,16 @@ def auth_view(request):
             username = request.POST.get('username')
             password = request.POST.get('password')
             
+            context["username_input"] = username
+            context["password_input"] = password
+            
             if username and password:
                 user = authenticate(username=username, password=password)
                 if user:
                     login(request, user)
                     return redirect('main_page')
                 else:
-                    context['error'] = 'Пошта або пароль невірні'
+                    context['error'] = "Ім'я або пароль невірні"
             else:
                 context['error'] = 'Заповніть усі поля'
     if 'leave_btn' in request.POST:
@@ -66,19 +59,9 @@ def reg_view(request):
     service_arrow = Icons.objects.get(id=2)
     service_arrow_footer = Icons.objects.get(id=7)
     
-    location = Icons.objects.get(id=3)
-    email = Icons.objects.get(id=4)
-    instagram = Icons.objects.get(id=5)
-    phone = Icons.objects.get(id=6)
-    
     context["logo"] = logo
     context["service_arrow"] = service_arrow
     context["service_arrow_footer"] = service_arrow_footer
-    
-    context["location"] = location
-    context["email"] = email
-    context["instagram"] = instagram
-    context["phone"] = phone
     
     burger_menu = Icons.objects.get(id=13)
     context["burger_menu"] = burger_menu
@@ -96,6 +79,12 @@ def reg_view(request):
         phone = request.POST.get('phone')
         email = request.POST.get('email')
         password = request.POST.get('password')
+        
+        context["username_input"] = username
+        context["surname_input"] = surname
+        context["phone_input"] = phone
+        context["email_input"] = email
+        context["password_input"] = password
         
         if username and surname and phone and email and password:
             if len(password) >= 8:
