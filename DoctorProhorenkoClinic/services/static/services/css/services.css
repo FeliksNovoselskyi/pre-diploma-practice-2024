@@ -58,28 +58,6 @@ main {
     padding-bottom: 40px;
 }
 
-.available-prices{
-    display: flex;
-    margin-top: 50px;
-    font-size: 18px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.available-prices-head{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 20px;
-}
-
-.available-prices-text{
-    padding: 0 5px;
-    max-width: 650px;
-    margin-top: 30px;
-}
-
 .prices-main{
     display: flex;
     justify-content: center;
@@ -124,17 +102,16 @@ tr:last-child td:last-child {
 }
 
 .price {
-    max-width: 150px;
+    width: 100%;
     display: flex;
-    justify-content: center; 
+    justify-content: flex-start; 
     height: 100%;  
-    padding-bottom: 5px;
-    padding-top: 5px;
+    padding: 0 5px;
     font-size: 18px;
-    text-align: center;
 }
 
 .table-service-text{
+    width: 100%;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 3px;
@@ -156,7 +133,7 @@ tr:last-child td:last-child {
 
 .need-info-main{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     margin-top: 20px;
@@ -169,47 +146,6 @@ tr:last-child td:last-child {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.for-need{
-    font-size: 18px;
-    display: flex;
-    margin-top: 50px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.for-need-text{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 20px;
-}
-.for-need-text1{
-    max-width: 650px;
-}
-
-.advantages{
-    font-size: 18px;
-    display: flex;
-    margin-top: 30px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.advantages-text{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 20px;
-}
-
-.advantages-text1{
-    max-width: 650px;
 }
 
 .button-start{
@@ -256,4 +192,8 @@ tr:last-child td:last-child {
 
 .text-block h2 {
     font-size: 18px;
+}
+
+.enroll-text {
+    font-size: 24px;
 }

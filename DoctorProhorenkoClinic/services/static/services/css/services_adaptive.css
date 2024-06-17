@@ -32,4 +32,19 @@
     .table-service-text{font-size: 16px;}
 
     .price {font-size: 16px;}
+
+    .sign .p{
+        text-align: center;
+    }
+
+    .sign{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .enroll-text {
+        font-size: 17px;
+    }
 }

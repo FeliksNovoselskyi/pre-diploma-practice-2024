@@ -91,10 +91,10 @@
                 </div>
 
                 <div class="main-price-card">
-                    {% if kriodest %}
-                        <img src="{{kriodest.image.url}}" alt="kriodest" class="price-card-img">
-                    {% endif %}
                     <div>
+                        {% if kriodest %}
+                            <img src="{{kriodest.image.url}}" alt="kriodest" class="price-card-img">
+                        {% endif %}
                         <h2 class="prices-header-text">Кріодеструкція</h2>
                         <p class="prices-text">Видалення новоутворень на шкірі за допомогою рідкого азоту</p>
                     </div>
@@ -102,10 +102,10 @@
                 </div>
 
                 <div class="main-price-card">
-                    {% if mezoter %}
-                        <img src="{{mezoter.image.url}}" alt="mezoter" class="price-card-img">
-                    {% endif %}
                     <div>
+                        {% if mezoter %}
+                            <img src="{{mezoter.image.url}}" alt="mezoter" class="price-card-img">
+                        {% endif %}
                         <h2 class="prices-header-text">Мезотерапія</h2>
                         <p class="prices-text">Стимулює ріст волосся та запобігає його інтенсивному випадінню</p>
                     </div>
@@ -208,6 +208,7 @@
             </div>
 
             <div id="sertificates">
+                <div class="temporarily-img"></div>
                 <div class="temporarily-img"></div>
                 <div class="temporarily-img"></div>
                 <div class="temporarily-img"></div>

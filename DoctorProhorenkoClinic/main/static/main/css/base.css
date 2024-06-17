@@ -33,8 +33,9 @@ body {
 header {
     display: flex;
     flex-direction: row;
-    padding: 7px 70px;
-    justify-content: space-between;
+    padding: 7px 130px;
+    justify-content: center;
+    gap: 200px;
     background-color: #FAFEFF;
     position: relative;
     z-index: 10;
@@ -147,7 +148,8 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 20px;
+    padding: 30px 130px;
+    
 }
 
 #footer-links-block {

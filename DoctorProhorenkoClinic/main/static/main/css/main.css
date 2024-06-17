@@ -1,7 +1,7 @@
 main {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
 }
 
 .main-page {
@@ -92,18 +92,22 @@ main {
     align-items: center;
     width: 100%;
     position: relative;
+    padding: 0 130px;
+    gap: 10px;
     z-index: 6;
 }
 
 #prices-cards {
     display: flex;
     flex-direction: row;
-    padding: 10px;
-    gap: 25px;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .price-card-img {
-    width: 360px;
+    width: 100%;
     height: 325px;
     border-radius: 18px;
 }
@@ -119,11 +123,18 @@ main {
 }
 
 .main-price-card {
-    width: 360px;
+    width: 500px;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+}
+
+.main-price-card div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
 }
 
 #prices-header {
@@ -151,7 +162,8 @@ main {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 80px;
+    gap: 20px;
+    width: 100%;
 }
 
 #about-doctor-img {
@@ -163,7 +175,7 @@ main {
 #name-specialty {
     display: flex;
     flex-direction: column;
-    width: 550px;
+    width: 100%;
     padding: 0 5px;
     gap: 20px;
 }
@@ -219,10 +231,11 @@ main {
 #sertificates {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     align-items: center;
-    padding: 10px 12.5px;
+    padding: 10px 0;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -251,7 +264,7 @@ main {
 }
 
 .temporarily-img {
-    width: 200px;
+    width: 220px;
     height: 280px;
     border: 2px solid #000;
     border-radius: 10px;
@@ -262,8 +275,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 130px;
     gap: 30px;
+    padding: 0 130px;
 }
 
 #consultation-block {
@@ -273,13 +286,14 @@ main {
     align-items: flex-start;
     height: 700px;
     padding: 0 130px;
+    box-shadow: 0 0 20px #000;
     gap: 10px;
 }
 
 #main-text {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    /* padding: 10px; */
     gap: 25px;
 }
 
@@ -306,7 +320,7 @@ main {
 #consultation-types {
     display: flex;
     flex-direction: row;
-    padding: 20px;
+    padding: 20px 0px;
     gap: 30px;
 }
 
@@ -330,6 +344,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2px;
+    width: 100%;
     padding: 10px 0;
 }
 
@@ -341,7 +356,7 @@ main {
 
 #watch-specialty p {
     font-size: 22px;
-    width: 560px;
+    width: 100%;
     color: #000;
 }
 
@@ -353,7 +368,7 @@ main {
 }
 
 .vertborder {
-    border-left: 1px solid #000;
+    border-left: 2px solid #000;
     height: 350px;
     width: 3px;
 }

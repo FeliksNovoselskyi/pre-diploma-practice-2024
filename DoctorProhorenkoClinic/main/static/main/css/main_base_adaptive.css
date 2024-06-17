@@ -1,6 +1,7 @@
 @media (max-width: 480px) {
     header {
         padding: 8px 10px;
+        justify-content: space-between;
     }
 
     body {
@@ -116,9 +117,11 @@
 
     #prices-cards {
         display: flex;
-        flex-direction: column;
-        padding: 10px;
-        gap: 25px;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 
     #doctor-info {
@@ -245,5 +248,17 @@
     .carousel-indicators {
         display: none;
         visibility: hidden;
+    }
+
+    .main-price-card {
+        width: 360px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    #prices-block {
+        padding: 0;
     }
 }
