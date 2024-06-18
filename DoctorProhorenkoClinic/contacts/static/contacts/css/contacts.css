@@ -9,6 +9,11 @@ main {
     height: 615px;
 }
 
+#header-info-block iframe {
+    width: 100%;
+    height: 615px;
+}
+
 #contacts-info {
     width: 100%;
     display: flex;

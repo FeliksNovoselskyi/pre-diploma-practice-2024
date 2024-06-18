@@ -8,7 +8,12 @@
         max-width: 480px;
     }
 
-    #header-info-block{
+    #header-info-block {
+        max-width: 480px;
+        max-height: 200px;
+    }
+
+    #header-info-block iframe{
         max-width: 480px;
         max-height: 200px;
     }
