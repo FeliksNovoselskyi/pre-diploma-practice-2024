@@ -52,62 +52,66 @@
             .form-input-div {width: 400px;}
             .submit-btn {width:max-content;}
         }
-    </style>
-    {% if consultations_page_image %}
-        <div class="block-consultations" style="background: no-repeat center/100% url('{{consultations_page_image.image.url}}');">
-            <div class="text-block">
-                <h1>Консультації</h1>
-                <h2>Багато консультацій з різних тем та проблем</h2>
-            </div>
-        </div>
-        {% if consultations_bg_image %}
-            <div class="main-text-block" style="background: url('{{consultations_bg_image.image.url}}');">
-            
-                <div class="prices-main">
-                    <div class="prices">
-                        <h1 class="head">Ціни</h1>
-                        <div class="prices-table">
-                            <table>
-                                {% for consultation in all_consultations %}
-                                    <tr>
-                                        <td><div class="table-service-text">{{consultation.name}}
-                                        </div></td>
-                                        <td><div class="price">{{consultation.price}}</div></td>
-                                    </tr>
-                                {% endfor %}
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="need-info">
-                    <div>
-                        <h1 class="head">Які аналізи необхідно здати</h1>
-                    </div>
-                    <div class="need-info-main">
-                        <p class="available-prices-text service-text">УЗД органів черевної порожнини та нирок<br>
-                            Загальний аналіз крові розгорнутий <br>
-                            Загальний білок крові<br>
-                            Феррітін<br>
-                            Біохімія крові: <br>
-                            обов’язково: АЛТ, АСТ, лужна фосфатаза, ГГТ, білірубін прямий, альфа амілаза, з-реактивний білок ультрачутливий, сечова кислота <br>
-                            Інсулін<br>
-                            Гоммоцистеїн <br>
-                            Ліпідний профіль: холестерин: лПНП та ЛПВЩ, тригліцериди крові <br>
-                            Вітамін Д: 25 (он) Д <br>
-                            Фолієва кислота <br>
-                            Пролактин та кортизол. <br>
-                            Якщо є алергія: єозинофільний катіонний білок та імуноглобулін Е загальний, ПЦР переносимість лактози <br>
-                        </p>
-                        <p class="need-info-text2 service-text">Якщо у вас вже є якісь із результатів перерахованих аналізів і, на момент консультації вони будуть не старші 2 місяці, тоді повторно передавати не потрібно. Також, будь-які додаткові аналізи ви можете взяти їх з собою.
 
-                        </p>
-                    </div>
+        .main-text-block {
+            background: url("{% static 'services/img/consultations_bg_image.png' %}");
+        }
+
+        .block-consultations {
+            background: no-repeat center/100% url("{% static 'services/img/consultations_page_image.png' %}");
+        }
+    </style>
+    <div class="block-consultations">
+        <div class="text-block">
+            <h1>Консультації</h1>
+            <h2>Багато консультацій з різних тем та проблем</h2>
+        </div>
+    </div>
+    <div class="main-text-block">
+    
+        <div class="prices-main">
+            <div class="prices">
+                <h1 class="head">Ціни</h1>
+                <div class="prices-table">
+                    <table>
+                        {% for consultation in all_consultations %}
+                            <tr>
+                                <td><div class="table-service-text">{{consultation.name}}
+                                </div></td>
+                                <td><div class="price">{{consultation.price}}</div></td>
+                            </tr>
+                        {% endfor %}
+                    </table>
                 </div>
             </div>
-        {% endif %}
-        <div class="sign">
-            <p class="enroll-text">Запишіться на прийом, якщо маєте потребу у наших послугах</p>
-            <button type="button" class="btn button-start" data-bs-toggle="modal" data-bs-target="#exampleModal">Записатись</button>
         </div>
-    {% endif %}
+        <div class="need-info">
+            <div>
+                <h1 class="head">Які аналізи необхідно здати</h1>
+            </div>
+            <div class="need-info-main">
+                <p class="available-prices-text service-text">УЗД органів черевної порожнини та нирок<br>
+                    Загальний аналіз крові розгорнутий <br>
+                    Загальний білок крові<br>
+                    Феррітін<br>
+                    Біохімія крові: <br>
+                    обов’язково: АЛТ, АСТ, лужна фосфатаза, ГГТ, білірубін прямий, альфа амілаза, з-реактивний білок ультрачутливий, сечова кислота <br>
+                    Інсулін<br>
+                    Гоммоцистеїн <br>
+                    Ліпідний профіль: холестерин: лПНП та ЛПВЩ, тригліцериди крові <br>
+                    Вітамін Д: 25 (он) Д <br>
+                    Фолієва кислота <br>
+                    Пролактин та кортизол. <br>
+                    Якщо є алергія: єозинофільний катіонний білок та імуноглобулін Е загальний, ПЦР переносимість лактози <br>
+                </p>
+                <p class="need-info-text2 service-text">Якщо у вас вже є якісь із результатів перерахованих аналізів і, на момент консультації вони будуть не старші 2 місяці, тоді повторно передавати не потрібно. Також, будь-які додаткові аналізи ви можете взяти їх з собою.
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="sign">
+        <p class="enroll-text">Запишіться на прийом, якщо маєте потребу у наших послугах</p>
+        <button type="button" class="btn button-start" data-bs-toggle="modal" data-bs-target="#exampleModal">Записатись</button>
+    </div>
 {% endblock %}

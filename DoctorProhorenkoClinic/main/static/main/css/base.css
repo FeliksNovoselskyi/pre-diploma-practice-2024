@@ -169,6 +169,7 @@ footer {
 .footer-links {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 .footer-links.menu{gap: 10px;}
@@ -220,4 +221,14 @@ footer {
     background-color: transparent;
     border: transparent;
     visibility: hidden;
+}
+
+#footer-insta-link {
+    text-decoration: none;
+    font-size: 20px;
+    color: #9B9B9B;
+}
+
+#footer-insta-link p {
+    margin-bottom: 0;
 }

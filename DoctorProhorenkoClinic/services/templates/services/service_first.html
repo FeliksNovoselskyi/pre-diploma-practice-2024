@@ -52,41 +52,45 @@
             .form-input-div {width: 400px;}
             .submit-btn {width:max-content;}
         }
+
+        .main-text-block {
+            background: url("{% static 'services/img/services_bg_image.png' %}");
+        }
+
+        .block-consultations {
+            background: no-repeat center/100% url("{% static 'services/img/onkodermatologia_page_image.png' %}");
+        }
     </style>
-    {% if onkoderm_page_image %}
-        <div class="block-consultations" style="background: no-repeat center/100% url('{{onkoderm_page_image.image.url}}');">
-            <div class="text-block">
-                <h1>Онкодерматологія</h1>
-                <h2>Спеціалізується на раку шкіри</h2>
-            </div>
+    <div class="block-consultations">
+        <div class="text-block">
+            <h1>Онкодерматологія</h1>
+            <h2>Спеціалізується на раку шкіри</h2>
         </div>
-        {% if service_bg_image %}
-            <div class="main-text-block" style="background: url('{{service_bg_image.image.url}}');">
-                <div class="prices-main">
-                    <div class="prices">
-                        <h1 class="head">Наявні прайси</h1>
-                        <div class="prices-table">
-                            <table>
-                                <colgroup>
-                                    <col />
-                                    <col style="width: 150px;" />
-                                </colgroup>
-                                {% for service1 in all_service1 %}
-                                    <tr>
-                                        <td><div class="table-service-text">{{service1.name}}
-                                        </div></td>
-                                        <td><div class="price">{{service1.price}}</div></td>
-                                    </tr>
-                                {% endfor %}
-                            </table>
-                        </div>
-                    </div>
+    </div>
+    <div class="main-text-block">
+        <div class="prices-main">
+            <div class="prices">
+                <h1 class="head">Наявні прайси</h1>
+                <div class="prices-table">
+                    <table>
+                        <colgroup>
+                            <col />
+                            <col style="width: 150px;" />
+                        </colgroup>
+                        {% for service1 in all_service1 %}
+                            <tr>
+                                <td><div class="table-service-text">{{service1.name}}
+                                </div></td>
+                                <td><div class="price">{{service1.price}}</div></td>
+                            </tr>
+                        {% endfor %}
+                    </table>
                 </div>
             </div>
-        {% endif %}
-        <div class="sign">
-            <p class="enroll-text">Запишіться на прийом, якщо маєте потребу у наших послугах</p>
-            <button type="button" class="btn button-start" data-bs-toggle="modal" data-bs-target="#exampleModal">Записатись</button>
         </div>
-    {% endif %}
+    </div>
+    <div class="sign">
+        <p class="enroll-text">Запишіться на прийом, якщо маєте потребу у наших послугах</p>
+        <button type="button" class="btn button-start" data-bs-toggle="modal" data-bs-target="#exampleModal">Записатись</button>
+    </div>
 {% endblock %}

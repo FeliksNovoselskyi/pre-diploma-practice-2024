@@ -1,10 +1,3 @@
 from django.db import models
 
 # Create your models here.
-class Icons(models.Model):
-    name = models.CharField(max_length=255)
-    image = models.ImageField()
-    
-class BackgroundImages(models.Model):
-    name = models.CharField(max_length=255)
-    image = models.ImageField()

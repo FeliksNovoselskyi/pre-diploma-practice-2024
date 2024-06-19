@@ -66,22 +66,15 @@
         }
     </style>
     <header>
-        {% if logo %}
-            <a href="{% url 'main_page' %}"><img src="{{logo.image.url}}" alt="logo" id="logo"></a>
-        {% endif %}
-
-        {% if burger_menu %}
-            <button id="burger-menu-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="{{burger_menu.image.url}}" alt="burger-menu"></button>
-        {% endif %}
+        <a href="{% url 'main_page' %}"><img src="{% static 'main/img/LOGO.png' %}" alt="logo" id="logo"></a>
+        <button id="burger-menu-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="{% static 'main/img/burger-menu.png' %}" alt="burger-menu"></button>
 
         <div class="links">
             <a href="{% url 'main_page' %}" class="link header-links-text">Головна</a>
             
             <div id="service-link">
                 <p class="header-links-text">Послуги</p>
-                {% if service_arrow %}
-                    <img src="{{service_arrow.image.url}}" alt="service-arrow" id="service-arrow-header">
-                {% endif %}
+                <img src="{% static 'main/img/services-arrow-header.png' %}" alt="service-arrow" id="service-arrow-header">
             </div>
 
             <a href="{% url 'contacts_page' %}" class="link header-links-text">Контакти</a>
@@ -128,9 +121,7 @@
 
                         <div id="service-link-footer">
                             <p class="footer-link">Послуги</p>
-                            {% if service_arrow_footer %}
-                                <img src="{{service_arrow_footer.image.url}}" alt="service-arrow-footer" id="service-arrow-footer">
-                            {% endif %}
+                            <img src="{% static 'main/img/services-arrow-footer.png' %}" alt="service-arrow-footer" id="service-arrow-footer">
                         </div>
 
                         <a href="{% url 'contacts_page' %}" class="footer-link">Контакти</a>
@@ -143,31 +134,23 @@
                         <p class="footer-p">Інна Прохоренко</p>
 
                         <div class="linkage">
-                            {% if phone %}
-                                <img src="{{phone.image.url}}" alt="phone" class="footer-icons">
-                            {% endif %}
+                            <img src="{% static 'main/img/phone.png' %}" alt="phone" class="footer-icons">
                             <p class="footer-p text">+380 97 517 63 83</p>
                         </div>
                         
                         <div class="linkage">
-                            {% if location %}
-                                <img src="{{location.image.url}}" alt="location" class="footer-icons">
-                            {% endif %}
+                            <img src="{% static 'main/img/location.png' %}" alt="location" class="footer-icons">
                             <p class="footer-p text">м. Дніпро вул. Сімферопольська 2к</p>
                         </div>
                         
                         <div class="linkage">
-                            {% if email %}
-                                <img src="{{email.image.url}}" alt="email" class="footer-icons">
-                            {% endif %}
-                            <p class="footer-p text">...@gmail.com</p>
+                            <img src="{% static 'main/img/email.png' %}" alt="email" class="footer-icons">
+                            <p class="footer-p text">doctorprohorenkoclinic@gmail.com</p>
                         </div>
                         
                         <div class="linkage">
-                            {% if instagram %}
-                                <img src="{{instagram.image.url}}" alt="instagram" class="footer-icons">
-                            {% endif %}
-                            <p class="footer-p text">Інстаграм</p>
+                            <img src="{% static 'main/img/instagram.png' %}" alt="instagram" class="footer-icons">
+                            <a href="https://www.instagram.com/dr._prohorenko?utm_source=qr" id="footer-insta-link"><p>@dr._prohorenko</p></a>
                         </div>
                         
                     </div>
@@ -181,9 +164,7 @@
                 </div>
             </div>
 
-            {% if logo %}
-                <a href="{% url 'main_page' %}"><img src="{{logo.image.url}}" alt="logo" id="footer-logo"></a>
-            {% endif %}
+            <a href="{% url 'main_page' %}"><img src="{% static 'main/img/LOGO.png' %}" alt="logo" id="footer-logo"></a>
         </footer>
     {% endif %}
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -220,9 +201,7 @@
 
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
-            {% if logo %}
-                <a href="{% url 'main_page' %}"><img src="{{logo.image.url}}" alt="logo" id="burger-menu-logo"></a>
-            {% endif %}
+            <a href="{% url 'main_page' %}"><img src="{% static 'main/img/LOGO.png' %}" alt="logo" id="burger-menu-logo"></a>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="burger-menu-body">

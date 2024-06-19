@@ -12,49 +12,53 @@
                 .form-input-div {width: 400px;}
                 .submit-btn {width:max-content;}
             }
+
+        #sertificate-main-block {    
+            background: url("{% static 'sertificates/img/sertificates_bg_image.png' %}")
+        }
+
+        #block-sertificates {
+            background: no-repeat center/100% url("{% static 'sertificates/img/sertificates_page_image.png' %}");
+        }
     </style>
-    {% if sertificates_page_image %}
-        <div id="block-sertificates" style="background: no-repeat center/100% url('{{sertificates_page_image.image.url}}');">
-            <div id="text-block">
-                <h1>Сертифікати</h1>
-                <h2>Підтверджують якість та надійність</h2>
+    <div id="block-sertificates">
+        <div id="text-block">
+            <h1>Сертифікати</h1>
+            <h2>Підтверджують якість та надійність</h2>
+        </div>
+    </div>
+
+    <div id="sertificate-main-block">
+        <div class="sertificate">
+            <div class="temporarily-img-sertificate left"></div>
+
+            <div class="sertificate-text">
+                <h2>Сертифікат Української асоціації лікарів-дерматовенерологів і косметологів</h2>
             </div>
         </div>
 
-        {% if sertificates_bg_image %}
-            <div id="sertificate-main-block" style="background: url('{{sertificates_bg_image.image.url}}');">
-                <div class="sertificate">
-                    <div class="temporarily-img-sertificate left"></div>
-
-                    <div class="sertificate-text">
-                        <h2>Сертифікат Української асоціації лікарів-дерматовенерологів і косметологів</h2>
-                    </div>
-                </div>
-
-                <div class="sertificate">
-                    <div class="temporarily-img-sertificate left"></div>
-                    <div class="sertificate-text">
-                        <h2>Сертифікат Всеукраїнської асоціації трихологів</h2>
-                    </div>
-                </div>
-
-                <div class="sertificate">
-                    <div class="temporarily-img-sertificate left"></div>
-
-                    <div class="sertificate-text">
-                        <h2>Сертифікат лікаря - спеціаліста</h2>
-                    </div>
-                </div>
-
-                <div class="sertificate">
-                    <div class="temporarily-img-sertificate left"></div>
-                    <div class="sertificate-text">
-                        <h2>Сертифікат учасника регіональної науково-практичної конференції
-                            “Прикарпатські дермотовенерологічні дні: Сучасні аспекти реформування
-                            дерматовенерологічної служби”</h2>
-                    </div>
-                </div>
+        <div class="sertificate">
+            <div class="temporarily-img-sertificate left"></div>
+            <div class="sertificate-text">
+                <h2>Сертифікат Всеукраїнської асоціації трихологів</h2>
             </div>
-        {% endif %}
-    {% endif %}
+        </div>
+
+        <div class="sertificate">
+            <div class="temporarily-img-sertificate left"></div>
+
+            <div class="sertificate-text">
+                <h2>Сертифікат лікаря - спеціаліста</h2>
+            </div>
+        </div>
+
+        <div class="sertificate">
+            <div class="temporarily-img-sertificate left"></div>
+            <div class="sertificate-text">
+                <h2>Сертифікат учасника регіональної науково-практичної конференції
+                    “Прикарпатські дермотовенерологічні дні: Сучасні аспекти реформування
+                    дерматовенерологічної служби”</h2>
+            </div>
+        </div>
+    </div>
 {% endblock %}

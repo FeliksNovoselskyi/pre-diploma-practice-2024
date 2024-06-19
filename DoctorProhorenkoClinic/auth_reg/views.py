@@ -8,17 +8,6 @@ from main.models import *
 def auth_view(request):
     context = {}
     
-    logo = Icons.objects.get(id=1)
-    service_arrow = Icons.objects.get(id=2)
-    service_arrow_footer = Icons.objects.get(id=7)
-    
-    context["logo"] = logo
-    context["service_arrow"] = service_arrow
-    context["service_arrow_footer"] = service_arrow_footer
-    
-    burger_menu = Icons.objects.get(id=13)
-    context["burger_menu"] = burger_menu
-    
     context['show_footer'] = False
     context['show_sign_in'] = False
     
@@ -54,17 +43,6 @@ def auth_view(request):
 
 def reg_view(request):
     context = {}
-    
-    logo = Icons.objects.get(id=1)
-    service_arrow = Icons.objects.get(id=2)
-    service_arrow_footer = Icons.objects.get(id=7)
-    
-    context["logo"] = logo
-    context["service_arrow"] = service_arrow
-    context["service_arrow_footer"] = service_arrow_footer
-    
-    burger_menu = Icons.objects.get(id=13)
-    context["burger_menu"] = burger_menu
     
     context['show_footer'] = False
     context['show_sign_in'] = True

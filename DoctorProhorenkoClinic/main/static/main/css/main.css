@@ -250,7 +250,7 @@ main {
 
 /* .dark-btn:hover {
     background-color: transparent;
-    color: #000;    
+    color: #000;
 } */
 
 .small-dark-btn {
@@ -371,4 +371,8 @@ main {
     border-left: 2px solid #000;
     height: 350px;
     width: 3px;
+}
+
+.slider-img {
+    filter: brightness(90%)
 }

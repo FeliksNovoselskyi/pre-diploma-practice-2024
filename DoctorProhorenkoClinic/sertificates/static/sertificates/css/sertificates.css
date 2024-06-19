@@ -31,6 +31,14 @@ main {
     color: white;
 }
 
+#text-block h1 {
+    font-size: 48px;
+}
+
+#text-block h2 {
+    font-size: 18px;
+}
+
 .sertificate {
     display: flex;
     flex-direction: row;
