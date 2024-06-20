@@ -32,6 +32,10 @@
         padding: 20px 10px;
     }
 
+    footer iframe {
+        width: 100%;
+    }
+
     .footer-p.text {
         font-size: 18px;
     }
@@ -260,5 +264,11 @@
 
     #prices-block {
         padding: 0;
+    }
+
+    #footer-info-text-block {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
     }
 }

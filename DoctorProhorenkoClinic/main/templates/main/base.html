@@ -66,35 +66,37 @@
         }
     </style>
     <header>
-        <a href="{% url 'main_page' %}"><img src="{% static 'main/img/LOGO.png' %}" alt="logo" id="logo"></a>
-        <button id="burger-menu-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="{% static 'main/img/burger-menu.png' %}" alt="burger-menu"></button>
+        <div id="header-links-logo-block">
+            <a href="{% url 'main_page' %}"><img src="{% static 'main/img/LOGO.png' %}" alt="logo" id="logo"></a>
+            <button id="burger-menu-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="{% static 'main/img/burger-menu.png' %}" alt="burger-menu"></button>
 
-        <div class="links">
-            <a href="{% url 'main_page' %}" class="link header-links-text">Головна</a>
-            
-            <div id="service-link">
-                <p class="header-links-text">Послуги</p>
-                <img src="{% static 'main/img/services-arrow-header.png' %}" alt="service-arrow" id="service-arrow-header">
+            <div class="links">
+                <a href="{% url 'main_page' %}" class="link header-links-text">Головна</a>
+                
+                <div id="service-link">
+                    <p class="header-links-text">Послуги</p>
+                    <img src="{% static 'main/img/services-arrow-header.png' %}" alt="service-arrow" id="service-arrow-header">
+                </div>
+
+                <a href="{% url 'contacts_page' %}" class="link header-links-text">Контакти</a>
             </div>
 
-            <a href="{% url 'contacts_page' %}" class="link header-links-text">Контакти</a>
-        </div>
-
-        <div class="links">
-            {% if not signed_in %}
-                {% if show_sign_in %}
-                    <a href="{% url 'auth_page' %}" class="link header-links-text">Увійти</a>
-                {% endif %}
-            {% endif %}
-
-            {% if signed_in %}
-                {% if show_sign_in %}
-                    {% if username %}
-                        <a href="{% url 'auth_page' %}" class="link">{{username}}</a>
+            <div class="links">
+                {% if not signed_in %}
+                    {% if show_sign_in %}
+                        <a href="{% url 'auth_page' %}" class="link header-links-text">Увійти</a>
                     {% endif %}
                 {% endif %}
-            {% endif %}
-            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Записатись</button>
+
+                {% if signed_in %}
+                    {% if show_sign_in %}
+                        {% if username %}
+                            <a href="{% url 'auth_page' %}" class="link">{{username}}</a>
+                        {% endif %}
+                    {% endif %}
+                {% endif %}
+                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Записатись</button>
+            </div>
         </div>
 
         <div class="services-menu">
@@ -113,58 +115,64 @@
     {% if show_footer %}
         <footer>
             <div id="footer-links-block">
-                <div class="footer-info-text">
-                    <p class="footer-h">Меню</p>
-                    <div class="footer-links menu">
+                <div id="footer-links-block">
+                    <div id="footer-info-text-block">
+                        <div class="footer-info-text">
+                            <p class="footer-h">Меню</p>
+                            <div class="footer-links menu">
 
-                        <a href="{% url 'main_page' %}" class="footer-link">Головна</a>
+                                <a href="{% url 'main_page' %}" class="footer-link">Головна</a>
 
-                        <div id="service-link-footer">
-                            <p class="footer-link">Послуги</p>
-                            <img src="{% static 'main/img/services-arrow-footer.png' %}" alt="service-arrow-footer" id="service-arrow-footer">
+                                <div id="service-link-footer">
+                                    <p class="footer-link">Послуги</p>
+                                    <img src="{% static 'main/img/services-arrow-footer.png' %}" alt="service-arrow-footer" id="service-arrow-footer">
+                                </div>
+
+                                <a href="{% url 'contacts_page' %}" class="footer-link">Контакти</a>
+                            </div>
                         </div>
 
-                        <a href="{% url 'contacts_page' %}" class="footer-link">Контакти</a>
+                        <div class="footer-info-text">
+                            <p class="footer-h">Зв'язок</p>
+                            <div class="footer-links">
+                                <p class="footer-p">Інна Прохоренко</p>
+
+                                <div class="linkage">
+                                    <img src="{% static 'main/img/phone.png' %}" alt="phone" class="footer-icons">
+                                    <p class="footer-p text">+380 97 517 63 83</p>
+                                </div>
+                                
+                                <div class="linkage">
+                                    <img src="{% static 'main/img/location.png' %}" alt="location" class="footer-icons">
+                                    <p class="footer-p text">м. Дніпро вул. Сімферопольська 2к</p>
+                                </div>
+                                
+                                <div class="linkage">
+                                    <img src="{% static 'main/img/email.png' %}" alt="email" class="footer-icons">
+                                    <p class="footer-p text">doctorprohorenkoclinic@gmail.com</p>
+                                </div>
+                                
+                                <div class="linkage">
+                                    <img src="{% static 'main/img/instagram.png' %}" alt="instagram" class="footer-icons">
+                                    <a href="https://www.instagram.com/dr._prohorenko?utm_source=qr" id="footer-insta-link"><p>@dr._prohorenko</p></a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="services-menu-footer">
+                        <a href="{% url 'service_first_page' %}" class="link">Онкодерматологія</a>
+                        <a href="{% url 'service_second_page' %}" class="link">Кріодеструкція</a>
+                        <a href="{% url 'service_third_page' %}" class="link">Мезотерапія</a>
+                        <a href="{% url 'consultation_page' %}" class="link">Консультація</a>
                     </div>
                 </div>
 
-                <div class="footer-info-text">
-                    <p class="footer-h">Зв'язок</p>
-                    <div class="footer-links">
-                        <p class="footer-p">Інна Прохоренко</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d661.5793411972137!2d35.067673!3d48.45044!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDjCsDI3JzAxLjYiTiAzNcKwMDQnMDQuMCJF!5e0!3m2!1suk!2sua!4v1718898445091!5m2!1suk!2sua" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-                        <div class="linkage">
-                            <img src="{% static 'main/img/phone.png' %}" alt="phone" class="footer-icons">
-                            <p class="footer-p text">+380 97 517 63 83</p>
-                        </div>
-                        
-                        <div class="linkage">
-                            <img src="{% static 'main/img/location.png' %}" alt="location" class="footer-icons">
-                            <p class="footer-p text">м. Дніпро вул. Сімферопольська 2к</p>
-                        </div>
-                        
-                        <div class="linkage">
-                            <img src="{% static 'main/img/email.png' %}" alt="email" class="footer-icons">
-                            <p class="footer-p text">doctorprohorenkoclinic@gmail.com</p>
-                        </div>
-                        
-                        <div class="linkage">
-                            <img src="{% static 'main/img/instagram.png' %}" alt="instagram" class="footer-icons">
-                            <a href="https://www.instagram.com/dr._prohorenko?utm_source=qr" id="footer-insta-link"><p>@dr._prohorenko</p></a>
-                        </div>
-                        
-                    </div>
-                </div>
-
-                <div class="services-menu-footer">
-                    <a href="{% url 'service_first_page' %}" class="link">Онкодерматологія</a>
-                    <a href="{% url 'service_second_page' %}" class="link">Кріодеструкція</a>
-                    <a href="{% url 'service_third_page' %}" class="link">Мезотерапія</a>
-                    <a href="{% url 'consultation_page' %}" class="link">Консультація</a>
-                </div>
+                <a href="{% url 'main_page' %}"><img src="{% static 'main/img/LOGO.png' %}" alt="logo" id="footer-logo"></a>
             </div>
-
-            <a href="{% url 'main_page' %}"><img src="{% static 'main/img/LOGO.png' %}" alt="logo" id="footer-logo"></a>
         </footer>
     {% endif %}
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -20,30 +20,36 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 #info-block {
     display: flex;
     flex-direction: column;
-    padding: 10px;
     gap: 50px;
 }
 
 #info-blocks {
     display: flex;
     flex-direction: row;
-    padding: 10px;
     gap: 50px;
 }
 
-#info-b {
+.info-b {
     display: flex;
     flex-direction: row;
     align-items: start;
     padding: 5px 0;
     gap: 10px;
     line-height: 0%;
-    width: 350px;
+}
+
+.info-b.first {
+    width: 390px;
+}
+
+.info-b.second {
+    width: 220px;
 }
 
 .contacts-icon {
@@ -59,10 +65,10 @@ main {
 
 .info-b-text h2 {
     font-weight: 500;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .info-b-text p {
     color: #030303;
-    font-size: 16px;
+    font-size: 18px;
 }

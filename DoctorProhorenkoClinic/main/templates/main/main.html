@@ -45,44 +45,44 @@
         }
 
         #consultation-block {
-            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), no-repeat center/100% url("{% static 'main/img/consultations_bg_image.png' %}");
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), no-repeat top/100% url("{% static 'main/img/consultations_bg_image.png' %}");
         }
     </style>
 
     <div id="main-block">
-        <div id="header-info-block">
-            <div id="logo-text">
-                <img src="{% static 'main/img/LOGO_main_page.png' %}" alt="main-page-logo" id="main-page-logo">
-                <h1 class="main-page h1">
-                    <span>Клініка</span>
-                    <span>Доктора</span>
-                    <span>"Прохоренко"</span>
-                </h1>
+        <div id="header-footer-main-info-block">
+            <div id="header-info-block">
+                <div id="logo-text">
+                    <img src="{% static 'main/img/LOGO_main_page.png' %}" alt="main-page-logo" id="main-page-logo">
+                    <h1 class="main-page h1">
+                        <span>Клініка</span>
+                        <span>Доктора</span>
+                        <span>"Прохоренко"</span>
+                    </h1>
+                </div>
+
+                <div id="clinic-info">
+                    <p class="doctor-specialty-text">Клініка у центрі міста Дніпро із сучасними технологіями та методами діагностики і лікування</p>
+                </div>
             </div>
 
-            <div id="clinic-info">
-                <p class="doctor-specialty-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Tenetur exercitationem consequatur, dolores, et architecto pariatur iste, nisi nam at dicta deserunt? 
-                    Reiciendis et mollitia consequatur libero ipsum error ad deserunt.</p>
-            </div>
-        </div>
-
-        <div id="footer-info-block">
-            <div class="doctor-specialty">
-                <h2 class="main-page">Інтергативний лікар</h2>
-                <p class="doctor-specialty-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div class="doctor-specialty">
-                <h2 class="main-page">Трихолог</h2>
-                <p class="doctor-specialty-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div class="doctor-specialty">
-                <h2 class="main-page">Дерматолог</h2>
-                <p class="doctor-specialty-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div class="doctor-specialty">
-                <h2 class="main-page">Нутрициолог</h2>
-                <p class="doctor-specialty-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div id="footer-info-block">
+                <div class="doctor-specialty">
+                    <h2 class="main-page">Інтергативний лікар</h2>
+                    <p class="doctor-specialty-text">Спеціалізується на поєднанні традиційних та альтернативних медичних практик</p>
+                </div>
+                <div class="doctor-specialty">
+                    <h2 class="main-page">Трихолог</h2>
+                    <p class="doctor-specialty-text">Спеціалізується у сфері захворювань волосся</p>
+                </div>
+                <div class="doctor-specialty">
+                    <h2 class="main-page">Дерматолог</h2>
+                    <p class="doctor-specialty-text">Спеціалізується у сфері захворювань шкіри</p>
+                </div>
+                <div class="doctor-specialty">
+                    <h2 class="main-page">Нутрициолог</h2>
+                    <p class="doctor-specialty-text">Спеціалізується у сфері харчування</p>
+                </div>
             </div>
         </div>
     </div>
@@ -166,7 +166,7 @@
             <div id="watch-specialty">
                 <h2>Навчання<br> Досвід</h2>
                 <div>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus beatae facere facilis, eum recusandae dolorum expedita ab velit numquam laboriosam vel aperiam incidunt distinctio blanditiis. Earum cumque deserunt laudantium itaque.</p>
+                    <p>Лікар, працюючий у декількох напрямках, здатний знайти особистий підхід до кожного пацієнта. Багаторічне навчання та досвід праці надають психологічний комфорт клієнтам, результативні консультації та якісне вирішення проблем</p>
                     <a href="{% url 'sertificates_page' %}"><button class="dark-btn">Переглянути</button></a>
                 </div>
             </div>
@@ -216,26 +216,28 @@
     </div>
 
     <div id="consultation-block">
-        <div id="main-text">
-            <div id="consultation-text">
-                <h1>Консультації</h1>
-                <p>Різноманітні консультації - первинні, повторні, для усіх вікових груп. Динамічне спостереження, склеротерапія, консультація з трихоскопією. Введення препарату з консультацією</p>
+        <div id="consultation-text-types-block">
+            <div id="main-text">
+                <div id="consultation-text">
+                    <h1>Консультації</h1>
+                    <p>Різноманітні консультації - первинні, повторні, для усіх вікових груп. Динамічне спостереження, склеротерапія, консультація з трихоскопією. Введення препарату з консультацією</p>
+                </div>
+                <a href="{% url 'consultation_page' %}"><button class="light-btn">Переглянути</button></a>
             </div>
-            <a href="{% url 'consultation_page' %}"><button class="light-btn">Переглянути</button></a>
-        </div>
 
-        <div id="consultation-types">
-            <div class="c-type">
-                <h2>Нутріциолога</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div class="c-type">
-                <h2>Дерматолога</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div class="c-type">
-                <h2>Трихолога</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div id="consultation-types">
+                <div class="c-type">
+                    <h2>Нутріциолога</h2>
+                    <p>Відстеження харчування, потребує аналізів</p>
+                </div>
+                <div class="c-type">
+                    <h2>Дерматолога</h2>
+                    <p>Лікування захворювань шкіри, та динамічне спостереження</p>
+                </div>
+                <div class="c-type">
+                    <h2>Трихолога</h2>
+                    <p>Діагностика, лікування та профілактика усіх захворювань волосся</p>
+                </div>
             </div>
         </div>
     </div>

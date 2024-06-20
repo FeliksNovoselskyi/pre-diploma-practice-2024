@@ -14,6 +14,7 @@ main {
     font-size: 48px;
     gap: 5px;
     text-align: left;
+    font-style: italic;
 }
 
 #main-block {
@@ -22,17 +23,23 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 40px;
+    align-items: center;
     box-shadow: 0 0 20px #000;
     position: relative;
     z-index: 8;
+}
+
+#header-footer-main-info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 #header-info-block {
     display: flex;
     flex-direction: column;
     width: fit-content;
-    padding: 40px 50px;
+    padding: 30px 50px;
     gap: 10px;
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
@@ -57,6 +64,7 @@ main {
     border-radius: 24px;
     border: 1px solid #D5D5D5;
     box-shadow: 0 0 20px #000;
+    width: fit-content;
 }
 
 #main-page-logo {
@@ -67,7 +75,8 @@ main {
 .doctor-specialty-text {
     line-height: 100%;
     color: #FFFF;
-    font-size: 16px;
+    font-size: 20px;
+    font-style: italic;
 }
 
 #clinic-info p {
@@ -79,6 +88,7 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     align-self: center;
+    max-width: 400px;
 }
 
 .doctor-specialty h2 {
@@ -100,10 +110,10 @@ main {
 #prices-cards {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
-    flex-wrap: wrap;
-    gap: 20px;
+    /* flex-wrap: wrap; */
+    gap: 90px;
 }
 
 .price-card-img {
@@ -175,7 +185,8 @@ main {
 #name-specialty {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    /* width: 100%; */
+    width: 800px;
     padding: 0 5px;
     gap: 20px;
 }
@@ -233,6 +244,7 @@ main {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    max-width: 1670px;
     align-items: center;
     padding: 10px 0;
     flex-wrap: wrap;
@@ -283,7 +295,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     height: 700px;
     padding: 0 130px;
     box-shadow: 0 0 20px #000;
@@ -322,12 +334,14 @@ main {
     flex-direction: row;
     padding: 20px 0px;
     gap: 30px;
+    width: 100%;
 }
 
 .c-type {
     display: flex;
     flex-direction: column;
     padding: 40px;
+    width: 500px;
     gap: 10px;
     background-color: rgba(172, 172, 172, 0.4);
     color: #FFFF;
@@ -344,7 +358,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2px;
-    width: 100%;
+    max-width: 825px;
     padding: 10px 0;
 }
 
@@ -375,4 +389,12 @@ main {
 
 .slider-img {
     filter: brightness(90%)
+}
+
+#consultation-text-types-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 1680px;
 }

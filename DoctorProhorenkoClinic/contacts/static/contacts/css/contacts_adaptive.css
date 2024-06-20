@@ -43,5 +43,22 @@
         justify-content: center;
         align-items: center;
         gap: 5px;
-    }    
+    }
+
+    .info-b {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        padding: 5px 0;
+        gap: 10px;
+        line-height: 0%;
+    }
+    
+    .info-b.first {
+        width: 100%;
+    }
+    
+    .info-b.second {
+        width: 100%;
+    }
 }

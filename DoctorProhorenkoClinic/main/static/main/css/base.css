@@ -35,10 +35,16 @@ header {
     flex-direction: row;
     padding: 7px 130px;
     justify-content: center;
-    gap: 200px;
     background-color: #FAFEFF;
     position: relative;
     z-index: 10;
+}
+
+#header-links-logo-block {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1680px;
 }
 
 header #logo{
@@ -146,10 +152,22 @@ footer {
     background-color: #0B0B0B;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    padding: 40px 130px;
+    width: 100%;
+}
+
+#footer-links-block {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    padding: 30px 130px;
-    
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1680px;
+}
+
+footer iframe {
+    width: 800px;
 }
 
 #footer-links-block {
@@ -172,7 +190,7 @@ footer {
     gap: 10px;
 }
 
-.footer-links.menu{gap: 10px;}
+.footer-links.menu{gap: 15px;}
 
 .linkage {
     display: flex;
@@ -231,4 +249,9 @@ footer {
 
 #footer-insta-link p {
     margin-bottom: 0;
+}
+
+#footer-info-text-block {
+    display: flex;
+    gap: 50px;
 }

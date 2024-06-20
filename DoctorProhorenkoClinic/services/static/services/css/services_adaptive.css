@@ -1,11 +1,11 @@
 @media (max-width: 480px) {
     .block-consultations {
-        height: 200px;
+        height: 190px;
     }
 
     .text-block {
         gap: 10px;
-        padding: 15px 0;
+        padding: 15px 5px;
     }
 
     .text-block h1 {
