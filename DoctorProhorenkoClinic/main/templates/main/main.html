@@ -30,6 +30,25 @@
         @media (max-width: 480px) {
             .form-input-div {width: 400px;}
             .submit-btn {width:max-content;}
+
+            .carousel-item {
+                height: 300px;
+            }
+
+            .carousel-caption .light-btn {
+                display: none;
+                visibility: hidden;
+            }
+
+            .carousel-caption h5 {
+                display: none;
+                visibility: hidden;
+            }
+
+            .carousel-caption p {
+                display: none;
+                visibility: hidden;
+            }
         }
 
         #prices-block {
@@ -56,8 +75,17 @@
                 height: 600px;
             }
         }
-    </style>
 
+        @media (max-width: 480px) {
+            #consultation-block {
+                background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), no-repeat center/170% url("{% static 'main/img/consultations_bg_image.png' %}");
+            }
+
+            #main-block {
+                background: no-repeat center/170% url("{% static 'main/img/main_block_image.png' %}");
+            }
+        }
+    </style>
     <div id="main-block">
         <div id="header-footer-main-info-block">
             <div id="header-info-block">
@@ -92,6 +120,27 @@
                     <h2 class="main-page">Нутрициолог</h2>
                     <p class="doctor-specialty-text">Спеціалізується у сфері харчування</p>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-footer-info-b-for-margin">
+        <div class="footer-info-block mobile">
+            <div class="doctor-specialty">
+                <h2 class="main-page">Інтергативний лікар</h2>
+                <p class="doctor-specialty-text">Спеціалізується на поєднанні традиційних та альтернативних медичних практик</p>
+            </div>
+            <div class="doctor-specialty">
+                <h2 class="main-page">Трихолог</h2>
+                <p class="doctor-specialty-text">Спеціалізується у сфері захворювань волосся</p>
+            </div>
+            <div class="doctor-specialty">
+                <h2 class="main-page">Дерматолог</h2>
+                <p class="doctor-specialty-text">Спеціалізується у сфері захворювань шкіри</p>
+            </div>
+            <div class="doctor-specialty">
+                <h2 class="main-page">Нутрициолог</h2>
+                <p class="doctor-specialty-text">Спеціалізується у сфері харчування</p>
             </div>
         </div>
     </div>
@@ -137,26 +186,29 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="{% static 'main/img/location_slide.png' %}" class="d-block w-100 adaptive-slider slider-img" alt="location-slide">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption d-md-block slide-info-block">
                     <h5>Локація</h5>
                     <p>У самому центрі міста</p>
                     <a href="{% url 'contacts_page' %}"><button class="light-btn">Детальніше</button></a>
+                    <a href="{% url 'contacts_page' %}" class="mobile-slider-a"><button class="light-btn-mobile-slide">Локація</button></a>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="{% static 'main/img/fast_service_slide.png' %}" class="d-block w-100 adaptive-slider slider-img" alt="fast-service-slide">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption d-md-block slide-info-block">
                     <h5>Швидкий сервіс</h5>
                     <p>Швидке та зручне обслуговування</p>
                     <a href="{% url 'service_first_page' %}"><button class="light-btn">Детальніше</button></a>
+                    <a href="{% url 'service_first_page' %}" class="mobile-slider-a"><button class="light-btn-mobile-slide">Швидкий сервіс</button></a>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="{% static 'main/img/kids_consultation_slide.png' %}" class="d-block w-100 adaptive-slider slider-img" alt="kids-consultation-slide">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption d-md-block slide-info-block">
                     <h5>Дитячі консультації</h5>
                     <p>Можливість провести консультацію з вашою дитиною</p>
                     <a href="{% url 'consultation_page' %}"><button class="light-btn">Детальніше</button></a>
+                    <a href="{% url 'consultation_page' %}" class="mobile-slider-a"><button class="light-btn-mobile-slide">Дитячі консультації</button></a>
                 </div>
             </div>
         </div>
@@ -247,6 +299,23 @@
                     <h2>Трихолога</h2>
                     <p>Діагностика, лікування та профілактика усіх захворювань волосся</p>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-consultations-b-for-margin">
+        <div id="consultation-types-mobile">
+            <div class="c-type mobile-consultations">
+                <h2>Нутріциолога</h2>
+                <p>Відстеження харчування, потребує аналізів</p>
+            </div>
+            <div class="c-type mobile-consultations">
+                <h2>Дерматолога</h2>
+                <p>Лікування захворювань шкіри, та динамічне спостереження</p>
+            </div>
+            <div class="c-type mobile-consultations">
+                <h2>Трихолога</h2>
+                <p>Діагностика, лікування та профілактика усіх захворювань волосся</p>
             </div>
         </div>
     </div>

@@ -67,6 +67,11 @@ main {
     width: fit-content;
 }
 
+.footer-info-block.mobile {
+    display: none;
+    visibility: hidden;
+}
+
 #main-page-logo {
     width: 200px;
     height: 200px;
@@ -164,6 +169,26 @@ main {
 .light-btn:hover {
     background-color: transparent;
     color: #FFFF;    
+}
+
+.light-btn-mobile-slide {
+    font-size: 16px;
+    background-color: #FFFF;
+    color: #000;
+    border: 1.5px solid #FFFF;
+    border-radius: 24px;
+    padding: 10px 40px;
+    display: none;
+    visibility: hidden;
+}
+
+.mobile-slider-a {
+    text-decoration: none;
+}
+
+.slide-info-block {
+    display: flex;
+    justify-content: center;
 }
 
 #about-doctor {
@@ -335,6 +360,15 @@ main {
     width: 100%;
 }
 
+#consultation-types-mobile {
+    display: none;
+    visibility: hidden;
+}
+
+#mobile-consultations-b-for-margin {
+    padding: 0 10px;
+}
+
 .c-type {
     display: flex;
     flex-direction: column;
@@ -396,3 +430,5 @@ main {
     width: 100%;
     max-width: 1680px;
 }
+
+#mobile-footer-info-b-for-margin {padding: 0 10px;}
