@@ -47,6 +47,15 @@
         #consultation-block {
             background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), no-repeat top/100% url("{% static 'main/img/consultations_bg_image.png' %}");
         }
+
+        @media (min-width: 600px) and (max-width: 1200px) {
+            #consultation-block {
+                background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), no-repeat center/100% url("{% static 'main/img/consultations_bg_image.png' %}");
+            }
+            .carousel-item {
+                height: 600px;
+            }
+        }
     </style>
 
     <div id="main-block">

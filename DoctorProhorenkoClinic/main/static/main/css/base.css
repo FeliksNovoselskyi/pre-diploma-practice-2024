@@ -157,7 +157,7 @@ footer {
     width: 100%;
 }
 
-#footer-links-block {
+#footer-all-links-block {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

@@ -4,18 +4,14 @@
         justify-content: space-between;
     }
 
-    body {
-        max-width: 480px;
-    }
+    body {max-width: 480px;}
     
     header #logo {
         width: 70px;
         height: 70px;
     }
 
-    .links {
-        display: none;
-    }
+    .links {display: none;}
 
     #burger-menu-btn {
         display: block;
@@ -24,7 +20,6 @@
 
     footer {
         background-color: #0B0B0B;
-        display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
@@ -32,15 +27,10 @@
         padding: 20px 10px;
     }
 
-    footer iframe {
-        width: 100%;
-    }
+    footer iframe {width: 100%;}
+    .footer-p.text {font-size: 18px;}
 
-    .footer-p.text {
-        font-size: 18px;
-    }
-
-    #footer-links-block {
+    #footer-all-links-block {
         display: flex;
         flex-direction: column;
         padding: 0;
@@ -48,9 +38,7 @@
         line-height: 0%;
     }
 
-    #footer-logo {
-        display: none;
-    }
+    #footer-logo {display: none;}
 
     #burger-menu-logo {
         width: 70px;
@@ -67,9 +55,7 @@
         line-height: 100%;
     }
 
-    .brg-links-text {
-        font-size: 24px;
-    }
+    .brg-links-text {font-size: 24px;}
 
     .burger-menu-body button {
         border: transparent;
@@ -79,7 +65,6 @@
     }
 
     #footer-info-block {
-        display: flex;
         flex-direction: column;
         padding: 20px 10px;
     }
@@ -93,182 +78,169 @@
         height: 100px;
     }
 
-    .main-page.h1 {
-        font-size: 24px;
-    }
+    .main-page.h1 {font-size: 24px;}
 
     #main-block {
         padding: 10px;
         height: fit-content;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-items: flex-start;
     }
 
-    #header-info-block {
-        padding: 20px 10px;
-        gap: 10px;
-    }
-
-    #logo-text {
-        gap: 20px;
-    }
-
-    #clinic-info p {
-        width: 100%;
-    }
+    #header-info-block {padding: 20px 10px;}
+    #logo-text {gap: 20px;}
+    #clinic-info p {width: 100%;}
 
     #prices-cards {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        width: 100%;
         flex-wrap: wrap;
         gap: 20px;
     }
 
     #doctor-info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-items: flex-start;
         padding: 10px;
         gap: 20px;
     }
 
     #about-doctor {
-        display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: flex-start;
-        width: 100%;
-        gap: 20px;
     }
 
     .vertborder {
         height: 3px;
         width: 350px;
         border-left: transparent;
-        border-top: 1px solid #000;
+        border-top: 2px solid #000;
         margin: auto;
     }
 
-    #watch-specialty {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px 0;
-    }
+    #watch-specialty {gap: 10px;}
 
-    #watch-specialty p {
-        width: 100%;
-    }
-    
-    #watch-specialty div {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 20px;
-    }
+    #watch-specialty p {width: 100%;}
 
     #name-specialty {
-        display: flex;
-        flex-direction: column;
         width: 100%;
-        padding: 0 5px;
         gap: 5px;
     }
 
-    .header-text.specialty {
-        font-size: 32px;
-    }
-
-    #name-text p {
-        font-size: 20px;
-    }
+    .header-text.specialty {font-size: 32px;}
+    #name-text p {font-size: 20px;}
 
     #sertificates {
-        display: flex;
         justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
         padding: 0;
-        gap: 10px;
     }
 
     #consultation-block {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-items: flex-start;
         height: fit-content;
         padding: 0 10px;
-        gap: 10px;
     }
 
-    #consultation-text {
-        width: 100%;
-    }
-
-    #consultation-text h1 {
-        color: #FFFF;
-        font-size: 24px;
-    }
-    
-    #consultation-text p {
-        color: #FFFF;
-        font-size: 18px;
-    }
-
+    #consultation-text {width: 100%;}
+    #consultation-text h1 {font-size: 24px;}
+    #consultation-text p {font-size: 18px;}
     #consultation-types {
-        display: flex;
         flex-direction: column;
-        padding: 20px 0;
         gap: 20px;
     }
 
     .c-type {
-        display: flex;
-        flex-direction: column;
         width: 100%;
         padding: 20px;
-        gap: 10px;
-        background-color: rgba(172, 172, 172, 0.4);
-        color: #FFFF;
-        border-radius: 24px;
-        box-shadow: 0 0 20px #000;
-        backdrop-filter: blur(5px);
     }
     
     .c-type h2 {font-size: 24px;}
-    
     .c-type p {font-size: 16px;}
 
-    .adaptive-slider {
-        height: 300px;
-    }
+    .adaptive-slider {height: 300px;}
 
     .carousel-indicators {
         display: none;
         visibility: hidden;
     }
 
-    .main-price-card {
-        width: 360px;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+    .main-price-card {width: 360px;}
+    #prices-block {padding: 0;}
+    #footer-info-text-block {flex-direction: column;}
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+    body {
+        max-width: 1200px;
     }
 
-    #prices-block {
+    #footer-logo {display: none;}
+
+    header #logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    #burger-menu-logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .links {display: none;}
+
+    #burger-menu-btn {
+        display: block;
+        visibility: visible;
+    }
+
+    .burger-menu-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 10px;
+        gap: 20px;
+        line-height: 100%;
+    }
+
+    .brg-links-text {font-size: 24px;}
+
+    .burger-menu-body button {
+        border: transparent;
+        background-color: transparent;
+        font-size: 24px;
         padding: 0;
     }
 
-    #footer-info-text-block {
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
+    #consultation-block {height: 600px;}
+    
+    .c-type h2 {font-size: 24px;}
+    .c-type p {font-size: 14px;}
+    #consultation-text h1 {font-size: 32px;}
+    #consultation-text p {font-size: 18px;}
+    .slider-img {height: 600px;}
+    .prices-text {font-size: 16px;}
+    .prices-header-text {font-size: 22px;}
+
+    .main-price-card {
+        width: 280px;
+        justify-content: space-between;
     }
+
+    #prices-cards {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .price-card-img {height: 280px;}
+
+    footer iframe {width: 300px;}
+    #about-doctor {align-items: flex-start;}
+
+    #watch-specialty {
+        height: 100%;
+        width: 100%;
+    }
+    #name-specialty {
+        height: 100%;
+        width: 100%;
+    }
+    #watch-specialty p {font-size: 18px;}
+    .vertborder {height: 400px;}
 }
