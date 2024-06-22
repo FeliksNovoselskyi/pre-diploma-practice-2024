@@ -214,3 +214,7 @@ tr:last-child td:last-child {
 .prices-tb {
     width: 200px;
 }
+
+.prices-td {
+    width: 200px;
+}
