@@ -3,16 +3,10 @@
 Цей проект є сайтом для доктора Прохоренко. На цьому сайті ви можете ознайомитись з інформацією про доктора та клініку, та як з нею зв'язатись. Ви можете продивитись наявні послуги й консультації, та їх ціни. Сайт має зручний дизайн та функціонал, тому ви маєте змогу швидко отримати потрібну вам інформацію, та записатись на прийом.
 
 ## Учасники команди
-- Новосельський Фелікс/Novoselskyi Feliks - лідер команди
-- Гераймович Семен/Heraimovych Semen - дизайнер проекту, та його розробник
-- Людмила Махиня/Makhynia Liudmyla - дизайнер проекту, та його розробник
-- Михненко Данило/Mykhnenko Danylo - дизайнер проекту, та його розробник
-
-## Посилання на GitHub акаунти учасників команди
-- Новосельський Фелікс/Novoselskyi Feliks - [https://github.com/FeliksNovoselskyi](https://github.com/FeliksNovoselskyi)
-- Гераймович Семен/Heraimovych Semen - [https://github.com/arman455](https://github.com/arman455)
-- Людмила Махиня/Makhynia Liudmyla - [https://github.com/Ludmilkam](https://github.com/Ludmilkam)
-- Михненко Данило/Mykhnenko Danylo - [https://github.com/danil-michnenko](https://github.com/danil-michnenko)
+- [Новосельський Фелікс/Novoselskyi Feliks](https://github.com/FeliksNovoselskyi) - лідер команди
+- [Гераймович Семен/Heraimovych Semen](https://github.com/arman455) - дизайнер проекту, та його розробник
+- [Людмила Махиня/Makhynia Liudmyla](https://github.com/LiudmylaMakhynia) - дизайнер проекту, та його розробник
+- [Михненко Данило/Mykhnenko Danylo](https://github.com/danil-michnenko) - дизайнер проекту, та його розробник
 
 ## Опис сторінок проекту
 - **Головна сторінка** - можливість швидко переглянути наявні пропозиції клініки.
@@ -32,8 +26,8 @@
 - **FigJam** - онлайн-сервіс, який був використаний для планування функціоналу сайту.
 
 ## Посилання на Figma та FigJam
-- Figma проект - https://www.figma.com/design/Cmxt8OjIxcQVkusZVgJpJS/Untitled?node-id=0-1&t=IXh6wswWVGBAbsu6-1
-- FigJam - https://www.figma.com/board/Y5U9mctjukxSB2A5laDTnH/pre-diploma-practice-2024-FIGJAM?t=iRElZM5fwQltrSYK-1
+- [Figma проект](https://www.figma.com/design/Cmxt8OjIxcQVkusZVgJpJS/Untitled?node-id=0-1&t=IXh6wswWVGBAbsu6-1)
+- [FigJam](https://www.figma.com/board/Y5U9mctjukxSB2A5laDTnH/pre-diploma-practice-2024-FIGJAM?t=iRElZM5fwQltrSYK-1)
 
 ## Функціонал проекту
 
