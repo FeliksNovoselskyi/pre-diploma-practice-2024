@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import *
-import misc
+import utils
 
 # Create your views here.
 def service_first_view(request):
@@ -17,7 +17,7 @@ def service_first_view(request):
         context['username'] = request.user.username
         context['signed_in'] = True
 
-    misc.send_on_email(request)
+    utils.send_on_email(request)
 
     return render(request, 'services/service_first.html', context)
 
@@ -35,7 +35,7 @@ def service_second_view(request):
         context['username'] = request.user.username
         context['signed_in'] = True
         
-    misc.send_on_email(request)
+    utils.send_on_email(request)
 
     return render(request, 'services/service_second.html', context)
 
@@ -53,7 +53,7 @@ def service_third_view(request):
         context['username'] = request.user.username
         context['signed_in'] = True
         
-    misc.send_on_email(request)
+    utils.send_on_email(request)
 
     return render(request, 'services/service_third.html', context)
 
@@ -71,6 +71,6 @@ def service_consultations_view(request):
         context['username'] = request.user.username
         context['signed_in'] = True
         
-    misc.send_on_email(request)
+    utils.send_on_email(request)
 
     return render(request, 'services/service_consultations.html', context)

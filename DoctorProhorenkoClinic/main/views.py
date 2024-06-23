@@ -1,5 +1,5 @@
 from django.shortcuts import render
-import misc
+import utils
 
 # Create your views here.
 def main_view(request):
@@ -12,6 +12,6 @@ def main_view(request):
         context['username'] = request.user.username
         context['signed_in'] = True
         
-    misc.send_on_email(request)
+    utils.send_on_email(request)
     
     return render(request, 'main/main.html', context)
