@@ -1,68 +1,10 @@
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     header {
         padding: 8px 10px;
         justify-content: space-between;
     }
 
-    body {max-width: 480px;}
-    
-    header #logo {
-        width: 70px;
-        height: 70px;
-    }
-
-    .links {display: none;}
-
-    #burger-menu-btn {
-        display: block;
-        visibility: visible;
-    }
-
-    footer {
-        background-color: #0B0B0B;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        gap: 40px;
-        padding: 20px 10px;
-    }
-
-    footer iframe {width: 100%;}
-    .footer-p.text {font-size: 18px;}
-
-    #footer-all-links-block {
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        gap: 100px;
-        line-height: 0%;
-    }
-
-    #footer-logo {display: none;}
-
-    #burger-menu-logo {
-        width: 70px;
-        height: 70px;
-    }
-
-    .burger-menu-body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 10px;
-        gap: 20px;
-        line-height: 100%;
-    }
-
-    .brg-links-text {font-size: 24px;}
-
-    .burger-menu-body button {
-        border: transparent;
-        background-color: transparent;
-        font-size: 24px;
-        padding: 0;
-    }
+    body {max-width: 600px;}
 
     #footer-info-block {
         display: none;
@@ -78,16 +20,19 @@
         height: 100px;
     }
 
-    .main-page.h1 {font-size: 24px;}
-
     #main-block {
-        padding: 10px;
+        padding: 20px;
         height: fit-content;
         align-items: flex-start;
         height: 300px;
     }
 
+    .main-page.h1 {font-size: 24px;}
+    .footer-p {font-size: 16px;}
+    .footer-p.text {font-size: 16px;}
+
     #header-info-block {padding: 20px 10px;}
+
     #logo-text {gap: 20px;}
     #clinic-info p {width: 100%;}
 
@@ -139,9 +84,9 @@
         height: 350px;
     }
 
-    #consultation-text {width: 100%;}
     #consultation-text h1 {font-size: 24px;}
     #consultation-text p {font-size: 18px;}
+
     #consultation-types {
         flex-direction: column;
         gap: 20px;
@@ -177,12 +122,7 @@
         border-radius: 24px;
         border: 1px solid #D5D5D5;
         box-shadow: 0 0 20px #000;
-        width: fit-content;
-        visibility: visible;
-    }
-
-    .light-btn-mobile-slide {
-        display: flex;
+        width: 100%;
         visibility: visible;
     }
 
@@ -206,14 +146,127 @@
         max-width: 1200px;
     }
 
-    #footer-logo {display: none;}
+    #consultation-block {
+        align-items: flex-start;
+        height: fit-content;
+        padding: 0 10px;
+        height: 500px;
+    }
+    
+    .c-type h2 {font-size: 24px;}
+    .c-type p {font-size: 14px;}
+    #consultation-text h1 {font-size: 32px;}
+    #consultation-text p {font-size: 18px;}
+    .slider-img {height: 500px;}
+    .prices-text {font-size: 16px;}
+    .prices-header-text {font-size: 22px;}
 
-    header #logo {
-        width: 70px;
-        height: 70px;
+    .main-price-card {
+        width: 280px;
+        justify-content: space-between;
     }
 
-    #burger-menu-logo {
+    #prices-cards {
+        gap: 30px;
+    }
+
+    .price-card-img {
+        min-width: 280px;
+        height: 280px;
+    }
+
+    footer {
+        padding: 40px 20px;
+    }
+    footer iframe {width: 300px;}
+    #about-doctor {align-items: flex-start;}
+
+    #watch-specialty {
+        height: 100%;
+        width: 100%;
+    }
+    #name-specialty {
+        height: 100%;
+        width: 100%;
+    }
+    #watch-specialty p {font-size: 18px;}
+    .vertborder {height: 400px;}
+
+    .main-page.h1 {font-size: 24px;}
+
+    #main-page-logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .doctor-specialty-text {font-size: 16px;}
+    #header-info-block {padding: 20px 10px;}
+
+    .doctor-specialty h2 {font-size: 20px;}
+
+    #main-block {
+        padding: 10px;
+        height: fit-content;
+        align-items: flex-start;
+        height: 500px;
+    }
+
+    .c-type {
+        padding: 20px 10px;
+        width: 250px;
+    }
+
+    #consultation-text {width: 50%;}
+
+    .footer-link {font-size: 18px;}
+    .footer-p {font-size: 18px;}
+    .footer-p.text {font-size: 18px;}
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+    #prices-cards {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+    .price-card-img {
+        min-width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 860px) {
+    footer {
+        background-color: #0B0B0B;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+        padding: 20px 10px;
+    }
+
+    #footer-all-links-block {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        gap: 100px;
+        line-height: 0%;
+    }
+
+    footer iframe {
+        width: 100%;
+        height: 350px;
+    }
+
+    #main-block {height: fit-content;}
+
+    #consultation-text {width: 100%;}
+
+    #header-footer-main-info-block {gap: 15px;}
+}
+
+@media (max-width: 1200px) {
+    header #logo {
         width: 70px;
         height: 70px;
     }
@@ -223,6 +276,11 @@
     #burger-menu-btn {
         display: block;
         visibility: visible;
+    }
+
+    #burger-menu-logo {
+        width: 70px;
+        height: 70px;
     }
 
     .burger-menu-body {
@@ -243,40 +301,16 @@
         font-size: 24px;
         padding: 0;
     }
+}
 
-    #consultation-block {height: 600px;}
-    
-    .c-type h2 {font-size: 24px;}
-    .c-type p {font-size: 14px;}
-    #consultation-text h1 {font-size: 32px;}
-    #consultation-text p {font-size: 18px;}
-    .slider-img {height: 600px;}
-    .prices-text {font-size: 16px;}
-    .prices-header-text {font-size: 22px;}
 
-    .main-price-card {
-        width: 280px;
-        justify-content: space-between;
-    }
-
-    #prices-cards {
-        flex-wrap: wrap;
-        gap: 30px;
-    }
-
-    .price-card-img {height: 280px;}
-
-    footer iframe {width: 300px;}
-    #about-doctor {align-items: flex-start;}
-
-    #watch-specialty {
-        height: 100%;
+@media (min-width: 600px) and (max-width: 860px){
+    #footer-info-block {
+        display: block;
         width: 100%;
     }
-    #name-specialty {
-        height: 100%;
-        width: 100%;
-    }
-    #watch-specialty p {font-size: 18px;}
-    .vertborder {height: 400px;}
+}
+
+@media (max-width: 1370px) {
+    #footer-logo {display: none;}
 }

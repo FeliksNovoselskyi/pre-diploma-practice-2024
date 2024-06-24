@@ -7,85 +7,108 @@
 {% endblock %}
 
 {% block content %}
-    <style>
+<style>
+    .carousel-item {
+        height: 700px;
+    }
+
+    .carousel-caption {
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        height: fit-content;
+    }
+
+    .carousel-caption h5 {
+        font-size: 48px;
+    }
+
+    .carousel-caption p {
+        font-size: 18px;
+    }
+
+    @media (max-width: 770px) {
+        .form-input-div {width: 400px;}
+        .submit-btn {width:max-content;}
+
         .carousel-item {
-            height: 700px;
+            height: 300px;
         }
 
-        .carousel-caption {
-            top: 50%;
-            transform: translateY(-50%);
-            text-align: center;
-            height: fit-content;
+        .carousel-caption .light-btn {
+            display: none;
+            visibility: hidden;
         }
 
         .carousel-caption h5 {
-            font-size: 48px;
+            display: none;
+            visibility: hidden;
         }
 
         .carousel-caption p {
-            font-size: 18px;
+            display: none;
+            visibility: hidden;
         }
 
-        @media (max-width: 480px) {
-            .form-input-div {width: 400px;}
-            .submit-btn {width:max-content;}
+        .light-btn-mobile-slide {
+            display: flex;
+            visibility: visible;
+        }
+    }
 
-            .carousel-item {
-                height: 300px;
-            }
+    #prices-block {
+        background: url("{% static 'main/img/services_bg_image.png' %}");
+    }
 
-            .carousel-caption .light-btn {
-                display: none;
-                visibility: hidden;
-            }
+    #doctor-info {
+        background: url("{% static 'main/img/services_bg_image.png' %}");
+    }
 
-            .carousel-caption h5 {
-                display: none;
-                visibility: hidden;
-            }
+    #main-block {
+        background: no-repeat center/100% url("{% static 'main/img/main_block_image.png' %}");
+    }
 
-            .carousel-caption p {
-                display: none;
-                visibility: hidden;
-            }
+    #consultation-block {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), no-repeat top/100% url("{% static 'main/img/consultations_bg_image.png' %}");
+    }
+
+    @media (min-width: 600px) and (max-width: 1200px) {
+        #consultation-block {
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), no-repeat center/100% url("{% static 'main/img/consultations_bg_image.png' %}");
+        }
+        .carousel-item {
+            height: 500px;
         }
 
-        #prices-block {
-            background: url("{% static 'main/img/services_bg_image.png' %}");
+        .carousel-caption h5 {
+            font-size: 24px;
         }
 
-        #doctor-info {
-            background: url("{% static 'main/img/services_bg_image.png' %}");
+        .carousel-caption p {
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        #consultation-block {
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), no-repeat center/170% url("{% static 'main/img/consultations_bg_image.png' %}");
         }
 
         #main-block {
-            background: no-repeat center/100% url("{% static 'main/img/main_block_image.png' %}");
+            background: no-repeat center/170% url("{% static 'main/img/main_block_image.png' %}");
         }
+    }
 
+    @media (max-width: 900px) {
         #consultation-block {
-            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), no-repeat top/100% url("{% static 'main/img/consultations_bg_image.png' %}");
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), no-repeat top/200% url("{% static 'main/img/consultations_bg_image.png' %}");
         }
 
-        @media (min-width: 600px) and (max-width: 1200px) {
-            #consultation-block {
-                background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), no-repeat center/100% url("{% static 'main/img/consultations_bg_image.png' %}");
-            }
-            .carousel-item {
-                height: 600px;
-            }
+        #main-block {
+            background: no-repeat center/175% url("{% static 'main/img/main_block_image.png' %}");
         }
-
-        @media (max-width: 480px) {
-            #consultation-block {
-                background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), no-repeat center/170% url("{% static 'main/img/consultations_bg_image.png' %}");
-            }
-
-            #main-block {
-                background: no-repeat center/170% url("{% static 'main/img/main_block_image.png' %}");
-            }
-        }
-    </style>
+    }    
+</style>
     <div id="main-block">
         <div id="header-footer-main-info-block">
             <div id="header-info-block">

@@ -167,7 +167,8 @@ footer {
 }
 
 footer iframe {
-    width: 800px;
+    width: 350px;
+    height: 250px;
 }
 
 #footer-links-block {

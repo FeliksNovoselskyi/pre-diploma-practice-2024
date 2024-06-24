@@ -122,6 +122,8 @@ main {
 
 .price-card-img {
     width: 100%;
+    max-width: 500px;
+    min-width: 325px;
     height: 325px;
     border-radius: 18px;
 }
@@ -421,6 +423,7 @@ main {
 
 .slider-img {
     filter: brightness(90%);
+    height: 700px;
 }
 
 #consultation-text-types-block {
@@ -431,4 +434,4 @@ main {
     max-width: 1680px;
 }
 
-#mobile-footer-info-b-for-margin {padding: 0 10px;}
+#mobile-footer-info-b-for-margin {padding: 0 20px;}
