@@ -2,6 +2,23 @@
 
 Цей проект є сайтом для доктора Прохоренко. На цьому сайті ви можете ознайомитись з інформацією про доктора та клініку, та як з нею зв'язатись. Ви можете продивитись наявні послуги й консультації, та їх ціни. Сайт має зручний дизайн та функціонал, тому ви маєте змогу швидко отримати потрібну вам інформацію, та записатись на прийом.
 
+## Зміст
+- [Встановлення](#встановлення)
+- [Учасники команди](#учасники-команди)
+- [Опис сторінок проекту](#опис-сторінок-проекту)
+- [Використані технології](#використані-технології)
+- [Посилання на Figma та FigJam](#посилання-на-figma-та-figjam)
+- [Структура проекту](#структура-проекту)
+- [Функціонал проекту](#функціонал-проекту)
+- [Моделі проекту](#моделі-проекту)
+
+## Встановлення
+```
+git clone https://github.com/FeliksNovoselskyi/pre-diploma-practice-2024.git
+cd DoctorProhorenkoClinic
+python manage.py runserver
+```
+
 ## Учасники команди
 - [Новосельський Фелікс/Novoselskyi Feliks](https://github.com/FeliksNovoselskyi) - лідер команди
 - [Гераймович Семен/Heraimovych Semen](https://github.com/arman455) - дизайнер проекту, та його розробник
@@ -68,7 +85,7 @@ class EmailBackend(SMTPBackend):
 
 Таким чином, цей клас розширює стандартний EmailBackend, додаючи підтримку користувацького SSL-контексту для шифрування з'єднань під час надсилання електронної пошти через SMTP.
 
-### Файл DoctorProhorenkoClinic/misc.py
+### Файл DoctorProhorenkoClinic/utils.py
 
 ```python
 from django.core.mail import send_mail # Імпортуємо функцію send_mail, яку використовуємо для відправки запису на пошту
@@ -102,11 +119,11 @@ def send_on_email(request):
 def auth_view(request):
     context = {}
     
-    # Вимкнути відображення нижнього колонтитула та форми входу
+    # Вимкнути відображення footer-а та вимкнути відображення посилання для сторінки входу
     context['show_footer'] = False
     context['show_sign_in'] = False
     
-    # Якщо користувач автентифікований
+    # Якщо користувач увійшов в акаунт
     if request.user.is_authenticated:
         # Додати ім'я користувача до контексту
         context['username'] = request.user.username
@@ -156,7 +173,7 @@ def auth_view(request):
     # Відобразити шаблон авторизації з контекстом
     return render(request, 'auth_reg/auth.html', context)
 ```
-Ця функція відповідальна за авторизацію користувача, вхід в його акаунт
+Ця функція відповідальна за відображення сторінки авторизації, авторизацію користувача, вхід в його акаунт
 
 #### Функція reg_view:
 ```python
@@ -164,11 +181,11 @@ def reg_view(request):
     # Ініціалізуємо контекст для передачі даних у шаблон
     context = {}
     
-    # Вимкнути відображення нижнього колонтитула та увімкнути відображення форми входу
+    # Вимкнути відображення footer-а та увімкнути відображення посилання для сторінки входу
     context['show_footer'] = False
     context['show_sign_in'] = True
     
-    # Якщо користувач автентифікований
+    # Якщо користувач увійшов в акаунт
     if request.user.is_authenticated:
         # Додаємо ім'я користувача до контексту
         context['username'] = request.user.username
@@ -219,5 +236,223 @@ def reg_view(request):
     # Відображаємо шаблон реєстрації з контекстом
     return render(request, 'auth_reg/reg.html', context)
 ```
-Ця функція відповідальна за реєстрацію користувача, створення його акаунту
+Ця функція відповідальна за відображення сторінки реєстрації, реєстрацію користувача, створення його акаунту
 
+### Файл DoctorProhorenkoClinic/main/views.py
+
+#### Функція main_view:
+```python
+def main_view(request):
+    # Ініціалізуємо контекст для передачі даних у шаблон
+    context = {}
+
+    # Увімкнути відображення footer-а та увімкнути відображення посилання для сторінки входу
+    context['show_footer'] = True
+    context['show_sign_in'] = True
+
+    # Якщо користувач увійшов в акаунт
+    if request.user.is_authenticated:
+        # Додати ім'я користувача до контексту
+        context['username'] = request.user.username
+        # Вказуємо, що користувач увійшов у систему
+        context['signed_in'] = True
+
+    # Визиваємо функцію, яка виконує відправку запису на пошту
+    utils.send_on_email(request)
+
+    # Відображаємо шаблон головної сторінки з контекстом
+    return render(request, 'main/main.html', context)
+```
+Ця функція відображає головну сторінку та задає їй налаштування за допомогою контексту
+
+### Файл DoctorProhorenkoClinic/services/views.py
+
+#### Функція services_first_view:
+```python
+def service_first_view(request):
+    # Ініціалізуємо контекст для передачі даних у шаблон
+    context = {}
+
+    # Передаємо у змінну all_service1 усі послуги з відповідної моделі, для відображення їх на сторінці
+    all_service1 = Service1.objects.all()
+
+    # Передаємо у контекст отримані послуги з моделі
+    context["all_service1"] = all_service1
+
+    # Увімкнути відображення footer-а та увімкнути відображення посилання для сторінки входу
+    context['show_footer'] = True
+    context['show_sign_in'] = True
+
+    # Якщо користувач увійшов в акаунт
+    if request.user.is_authenticated:
+        # Додати ім'я користувача до контексту
+        context['username'] = request.user.username
+        # Вказуємо, що користувач увійшов у систему
+        context['signed_in'] = True
+
+    # Визиваємо функцію, яка виконує відправку запису на пошту
+    utils.send_on_email(request)
+
+    # Відображаємо шаблон першої сторінки послуг з контекстом
+    return render(request, 'services/service_first.html', context)
+```
+Ця функція відображає першу сторінку послуг та задає їй налаштування за допомогою контексту
+
+Далі у цьому файлі йдуть ще три схожих на цю функції для інших сторінок с послугами, та сторінки консультацій:
+- service_second_view - використовує модель Service2
+- service_third_view - використовує модель Service3
+- service_consultations_view - використовує модель Consultations
+
+### Файл DoctorProhorenkoClinic/contacts/views.py
+
+#### Функція contacts_view:
+```python
+def contacts_view(request):
+    # Ініціалізуємо контекст для передачі даних у шаблон
+    context = {}
+
+    # Вимкнути відображення footer-а та увімкнути відображення посилання для сторінки входу
+    context['show_footer'] = False
+    context['show_sign_in'] = True
+
+    # Якщо користувач увійшов в акаунт
+    if request.user.is_authenticated:
+        # Додати ім'я користувача до контексту
+        context['username'] = request.user.username
+        # Вказуємо, що користувач увійшов у систему
+        context['signed_in'] = True
+
+    # Визиваємо функцію, яка виконує відправку запису на пошту
+    utils.send_on_email(request)
+
+    # Відображаємо шаблон сторінки контактів з контекстом
+    return render(request, 'contacts/contacts.html', context)
+```
+Ця функція відображає сторінку контактів, задає їй налаштування за допомогою контексту
+
+### Файл DoctorProhorenkoClinic/sertificates/views.py
+
+#### Функція sertificates_view:
+```python
+def sertificates_view(request):
+    # Ініціалізуємо контекст для передачі даних у шаблон
+    context = {}
+
+    # Увімкнути відображення footer-а та увімкнути відображення посилання для сторінки входу
+    context['show_footer'] = True
+    context['show_sign_in'] = True
+
+    # Якщо користувач увійшов в акаунт
+    if request.user.is_authenticated:
+        # Додати ім'я користувача до контексту
+        context['username'] = request.user.username
+        # Вказуємо, що користувач увійшов у систему
+        context['signed_in'] = True
+
+    # Визиваємо функцію, яка виконує відправку запису на пошту
+    utils.send_on_email(request)
+
+    # Відображаємо шаблон сторінки сертифікатів з контекстом
+    return render(request, 'sertificates/sertificates.html', context)
+```
+Ця функція відображає сторінку сертифікатів, задає їй налаштування за допомогою контексту
+
+### Файл DoctorProhorenkoClinic/main/static/main/js/base.js
+
+```javascript
+// Отримуємо посилання на послуги в шапці та footer
+const sLink = document.querySelector('#service-link')
+const sMenu = document.querySelector('.services-menu')
+
+// Отримуємо меню послуг в шапці та footer
+const sLinkFooter = document.querySelector('#service-link-footer')
+const sMenuFooter = document.querySelector('.services-menu-footer')
+
+// Обробник події кліку на посилання послуги в шапці
+sLink.addEventListener('click', () => {
+    const linkObj = sLink.getBoundingClientRect()
+    
+    // Перемикаємо клас для показу або приховування меню в шапці
+    sMenu.classList.toggle('show-s-menu')
+    sMenu.style.top = linkObj.bottom + 'px'
+    sMenu.style.left = linkObj.left + 'px'
+});
+
+// Обробник події кліку на посилання послуги в footer
+sLinkFooter.addEventListener('click', () => {
+    const linkObjFooter = sLinkFooter.getBoundingClientRect()
+    
+    // Перемикаємо клас для показу або приховування меню в footer
+    sMenuFooter.classList.toggle('show-s-menu-footer')
+    sMenuFooter.style.top = (linkObjFooter.bottom + window.scrollY) + 'px';
+    sMenuFooter.style.left = (linkObjFooter.left + window.scrollX) + 'px';
+});
+
+// Обробник події кліку поза меню в шапці, при якому воно зникає
+document.addEventListener('click', (event) => {
+    // Умова, якщо клік був поза меню, воно зникає
+    if (!sLink.contains(event.target) && !sMenu.contains(event.target)) {
+        sMenu.classList.remove('show-s-menu')
+    }
+})
+
+// Обробник події кліку поза меню в footer, при якому воно зникає
+document.addEventListener('click', (event) => {
+    // Умова, якщо клік був поза меню, воно зникає
+    if (!sLinkFooter.contains(event.target) && !sMenuFooter.contains(event.target)) {
+        sMenuFooter.classList.remove('show-s-menu-footer')
+    }
+})
+```
+Отже, у цьому файлі виконується відкривання та закривання меню з послугами та консультаціями
+
+### Файл DoctorProhorenkoClinic/auth_reg/static/auth_reg/js/auth_reg.js
+
+```javascript
+// Отримуємо кнопку, яка перемикає бачення паролю
+const showHide = document.querySelector('.show-hide-btn')
+// Отримуємо поле, яке містить пароль
+let input = document.querySelector('.form-input.password')
+
+// Обробник події кліку на кнопку
+showHide.addEventListener('click', () => {
+    // Умова показу паролю, якщо він був прихований
+    if (input.type == 'password') {
+        input.type = 'text'
+    }
+    // Умова приховування паролю, якщо він був показаний
+    else {
+        input.type = 'password'
+    }
+})
+```
+Отже, у цьому файлі виконується перемикання бачення паролю на сторінках авторизації та реєстрації
+
+## Моделі проекту
+
+### Файл DoctorProhorenkoClinic/services/models.py
+
+#### Модель Consultations:
+```python
+class Consultations(models.Model):
+    name = models.CharField(max_length=255)
+    price = models.CharField(max_length=255)
+```
+Містить в собі назву консультації та ціну на неї
+
+
+#### Модель Service1, Service2, Service3:
+```python
+class Service1(models.Model):
+    name = models.CharField(max_length=255)
+    price = models.CharField(max_length=255)
+
+class Service2(models.Model):
+    name = models.CharField(max_length=255)
+    price = models.CharField(max_length=255)
+
+class Service3(models.Model):
+    name = models.CharField(max_length=255)
+    price = models.CharField(max_length=255)
+```
+Містять в собі назви послуг та ціни на них
