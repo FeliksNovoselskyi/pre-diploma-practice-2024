@@ -29,7 +29,7 @@ main {
     gap: 50px;
 }
 
-#info-blocks {
+.info-blocks {
     display: flex;
     flex-direction: row;
     gap: 50px;
@@ -38,19 +38,14 @@ main {
 .info-b {
     display: flex;
     flex-direction: row;
-    align-items: start;
+    align-items: flex-start;
     padding: 5px 0;
     gap: 10px;
     line-height: 0%;
 }
 
-.info-b.first {
-    width: 390px;
-}
-
-.info-b.second {
-    width: 220px;
-}
+.info-b.first {width: 390px;}
+.info-b.second {width: 220px;}
 
 .contacts-icon {
     width: 50px;

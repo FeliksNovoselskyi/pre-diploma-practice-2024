@@ -142,9 +142,7 @@
 }
 
 @media (min-width: 600px) and (max-width: 1200px) {
-    body {
-        max-width: 1200px;
-    }
+    body {max-width: 1200px;}
 
     #consultation-block {
         align-items: flex-start;
@@ -166,19 +164,15 @@
         justify-content: space-between;
     }
 
-    #prices-cards {
-        gap: 30px;
-    }
+    #prices-cards {gap: 30px;}
 
     .price-card-img {
         min-width: 280px;
         height: 280px;
     }
 
-    footer {
-        padding: 40px 20px;
-    }
-    footer iframe {width: 300px;}
+    footer {padding: 40px 20px;}
+    footer iframe {width: 240px;}
     #about-doctor {align-items: flex-start;}
 
     #watch-specialty {
@@ -204,6 +198,8 @@
 
     .doctor-specialty h2 {font-size: 20px;}
 
+    #name-text p {font-size: 18px;}
+
     #main-block {
         padding: 10px;
         height: fit-content;
@@ -221,6 +217,8 @@
     .footer-link {font-size: 18px;}
     .footer-p {font-size: 18px;}
     .footer-p.text {font-size: 18px;}
+
+    #prices-header {font-size: 32px;}
 }
 
 @media (min-width: 600px) and (max-width: 1000px) {
@@ -301,6 +299,20 @@
         font-size: 24px;
         padding: 0;
     }
+
+    .footer-link.mobile-links {
+        display: block;
+        visibility: visible;
+    }
+
+    #service-link-footer {
+        display: none;
+        visibility: hidden;
+    }
+
+    .footer-links.menu{gap: 25px;}
+
+    .linkage {gap: 2.5px;}
 }
 
 
@@ -309,6 +321,8 @@
         display: block;
         width: 100%;
     }
+
+    .vertborder {height: 500px;}
 }
 
 @media (max-width: 1370px) {

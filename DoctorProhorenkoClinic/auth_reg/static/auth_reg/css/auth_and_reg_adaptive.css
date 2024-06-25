@@ -1,38 +1,33 @@
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     header {
         padding: 8px 10px;
         width: 100%;
     }
 
-    body {
-        max-width: 480px;
-    }
+    body {max-width: 600px;}
 
-    .sign-in-block{
-        width: 400px;
-
-    }
+    .sign-in-block{width: 100%;}
 
     header #logo {
         width: 70px;
         height: 70px;
     }
 
-    .links {
-        display: none;
-    }
+    .links {display: none;}
 
     .password-hints{
         padding-left: 30px;
         padding-bottom: 10px;
     }
 
-    .sign-in-block .reg{
-        width: 400px;
-    }
+    .sign-in-block .reg{width: 400px;}
 
     .sign-in-block {
         width: 100%;
         border-radius: 0;
     }
+}
+
+@media (max-width: 480px) {
+    .sign-in-block .reg{width: 350px;}
 }

@@ -225,6 +225,11 @@ footer iframe {
     font-size: 20px;
 }
 
+.footer-link.mobile-links {
+    display: none;
+    visibility: hidden;
+}
+
 #service-link-footer p.footer-link {margin-bottom: 0;}
 
 #footer-logo {

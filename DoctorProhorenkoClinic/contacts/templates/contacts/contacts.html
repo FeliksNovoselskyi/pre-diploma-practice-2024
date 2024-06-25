@@ -8,13 +8,21 @@
 
 {% block content %}
     <style>
-        @media (max-width: 480px) {
+        @media (max-width: 600px) {
             .form-input-div {width: 400px;}
             .submit-btn {width:max-content;}
         }
 
         #contacts-info {
             background: url("{% static 'contacts/img/contacts_bg_image.png' %}");
+        }
+
+        @media (max-width: 770px) {
+            .submit-btn {width:max-content;}
+        }
+
+        @media (max-width: 480px) {
+            .form-input-div {width: 350px;}
         }
     </style>
     <div id="header-info-block">
@@ -24,7 +32,7 @@
     <div id="contacts-info">
         <h1>Наші контакти</h1>
         <div id="info-block">
-            <div id="info-blocks">
+            <div class="info-blocks">
                 <div class="info-b first">
                     <img src="{% static 'contacts/img/contacts_location.png' %}" alt="contacts-location" class="contacts-icon">
                     <div class="info-b-text">
@@ -42,7 +50,7 @@
                 </div>
             </div>
 
-            <div id="info-blocks">
+            <div class="info-blocks">
                 <div class="info-b first">
                     <img src="{% static 'contacts/img/contacts_email.png' %}" alt="contacts-email" class="contacts-icon">
                     <div class="info-b-text">

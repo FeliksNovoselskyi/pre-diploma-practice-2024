@@ -66,17 +66,20 @@ def reg_view(request):
         
         if username and surname and phone and email and password:
             if len(password) >= 8:
-                try:
-                    User.objects.create_user(
-                        username=username,
-                        last_name=surname,
-                        # phone=phone,
-                        email=email,
-                        password=password,
-                    )
-                    return redirect('auth_page')
-                except IntegrityError:
-                    context['error'] = 'Такий користувач вже існує'
+                if len(username) <= 20:
+                    try:
+                        User.objects.create_user(
+                            username=username,
+                            last_name=surname,
+                            # phone=phone,
+                            email=email,
+                            password=password,
+                        )
+                        return redirect('auth_page')
+                    except IntegrityError:
+                        context['error'] = 'Такий користувач вже існує'
+                else:
+                    context['error'] = "Ім'я не може бути більше 20 символів"
             else:
                 context['error'] = 'Пароль занадто малий'
         else:

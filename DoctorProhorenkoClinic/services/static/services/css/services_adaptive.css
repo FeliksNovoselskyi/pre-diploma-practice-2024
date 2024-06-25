@@ -1,28 +1,19 @@
-@media (max-width: 480px) {
-    .block-consultations {
-        height: 190px;
-    }
+@media (max-width: 600px) {
+
+
+    .block-consultations {height: 190px;}
 
     .text-block {
         gap: 10px;
         padding: 15px 5px;
     }
 
-    .text-block h1 {
-        font-size: 24px;
-    }
+    .text-block h1 {font-size: 24px;}
+    .text-block h2 {font-size: 16px;}
 
-    .text-block h2 {
-        font-size: 16px;
-    }
+    .service-text {font-size: 17px;}
 
-    .service-text {
-        font-size: 17px;
-    }
-
-    .head{
-        font-size: 28px;
-    }
+    .head{font-size: 28px;}
 
     .button-start{
         width: fit-content;
@@ -33,9 +24,7 @@
 
     .price {font-size: 16px;}
 
-    .sign .p{
-        text-align: center;
-    }
+    .sign .p{text-align: center;}
 
     .sign{
         display: flex;
@@ -44,11 +33,9 @@
         text-align: center;
     }
 
-    .enroll-text {
-        font-size: 17px;
-    }
+    .enroll-text {font-size: 17px;}
 }
 
 @media (min-width: 600px) and (max-width: 1200px) {
-    .block-consultations{height: 550px;}
+    .block-consultations{height: 500px;}
 }

@@ -11,7 +11,7 @@
     <style>
         body {
             background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-            no-repeat center/100% url("{% static 'auth_reg/img/bg.png' %}");
+            no-repeat center/120% url("{% static 'auth_reg/img/bg.png' %}");
         }
 
         .show-hide-btn {
@@ -30,9 +30,30 @@
             background: no-repeat center/100% url("{% static 'auth_reg/img/show.png' %}");
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 600px) {
             .form-input-div {width: 400px;}
             .submit-btn {width:max-content;}
+
+            body {
+                background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+                no-repeat center/300% url("{% static 'auth_reg/img/bg.png' %}");
+            }
+        }
+
+        @media (max-width: 480px) {
+            .form-input-div {width: 350px;}
+
+            body {
+                background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+                no-repeat center/380% url("{% static 'auth_reg/img/bg.png' %}");
+            }
+        }
+
+        @media (min-width: 600px) and (max-width: 1200px) {
+            body {
+                background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+                no-repeat center/230% url("{% static 'auth_reg/img/bg.png' %}");
+            }
         }
 
     </style>

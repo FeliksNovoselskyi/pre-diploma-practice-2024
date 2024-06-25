@@ -1,20 +1,18 @@
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     header {
         padding: 8px 10px;
         width: 100%;
     }
 
-    body {
-        max-width: 480px;
-    }
+    body {max-width: 600px;}
 
     #header-info-block {
-        max-width: 480px;
+        max-width: 600px;
         max-height: 200px;
     }
 
     #header-info-block iframe{
-        max-width: 480px;
+        max-width: 600px;
         max-height: 200px;
     }
 
@@ -23,16 +21,14 @@
         height: 70px;
     }
 
-    .links {
-        display: none;
-    }
+    .links {display: none;}
 
     #burger-menu-btn {
         display: block;
         visibility: visible;
     }
 
-    #info-blocks{
+    .info-blocks{
         flex-direction: column;
         align-items: center;
     }
@@ -45,20 +41,22 @@
         gap: 5px;
     }
 
-    .info-b {
-        display: flex;
-        flex-direction: row;
-        align-items: start;
-        padding: 5px 0;
-        gap: 10px;
-        line-height: 0%;
-    }
+    .info-b {gap: 2.5px;}
     
-    .info-b.first {
-        width: 100%;
-    }
-    
-    .info-b.second {
-        width: 100%;
-    }
+    .info-b.first {width: 100%;}
+    .info-b.second {width: 100%;}
+
+    .info-b-text h2 {font-size: 18px;}
+    .info-b-text p {font-size: 16px;}
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+    .info-b-text h2 {font-size: 20px;}
+    .info-b-text p {font-size: 16px;}
+
+    .info-blocks {gap: 10px;}
+    .info-b.first {width: 350px;}
+
+    #header-info-block {height: 500px;}
+    #header-info-block iframe {height: 500px;}
 }
