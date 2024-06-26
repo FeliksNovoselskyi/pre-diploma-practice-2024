@@ -311,7 +311,6 @@
     }
 
     .footer-links.menu{gap: 25px;}
-
     .linkage {gap: 2.5px;}
 }
 
@@ -327,4 +326,11 @@
 
 @media (max-width: 1370px) {
     #footer-logo {display: none;}
+}
+
+@media (min-width: 1200px) and (max-width: 1520px) {
+    footer iframe {
+        width: 350px;
+        height: 200px;
+    }
 }

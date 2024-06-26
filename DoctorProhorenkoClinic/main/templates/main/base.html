@@ -75,13 +75,13 @@
                 
                 <div id="service-link">
                     <p class="header-links-text">Послуги</p>
-                    <img src="{% static 'main/img/services-arrow-header.png' %}" alt="service-arrow" id="service-arrow-header">
+                    <img src="{% static 'main/img/services-arrow-header.png' %}" alt="service-arrow" class="service-arrow header">
                 </div>
 
-                <a href="{% url 'contacts_page' %}" class="link header-links-text">Контакти</a>
+                <a href="{% url 'contacts_page' %}" class="link header-links-text r-contacts">Контакти</a>
             </div>
 
-            <div class="links">
+            <div class="links right-l">
                 {% if not signed_in %}
                     {% if show_sign_in %}
                         <a href="{% url 'auth_page' %}" class="link header-links-text">Увійти</a>
@@ -125,7 +125,7 @@
 
                                 <div id="service-link-footer">
                                     <p class="footer-link">Послуги</p>
-                                    <img src="{% static 'main/img/services-arrow-footer.png' %}" alt="service-arrow-footer" id="service-arrow-footer">
+                                    <img src="{% static 'main/img/services-arrow-footer.png' %}" alt="service-arrow-footer" class="service-arrow footer">
                                 </div>
 
                                 <a href="{% url 'service_first_page' %}" class="footer-link mobile-links">Онкодерматологія</a>
@@ -176,7 +176,7 @@
 
                 <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d661.5793411972137!2d35.067673!3d48.45044!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDjCsDI3JzAxLjYiTiAzNcKwMDQnMDQuMCJF!5e0!3m2!1suk!2sua!4v1718898445091!5m2!1suk!2sua" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-                <a href="{% url 'main_page' %}"><img src="{% static 'main/img/LOGO.png' %}" alt="logo" id="footer-logo"></a>
+                <a href="{% url 'main_page' %}"><img src="{% static 'main/img/LOGO_footer.png' %}" alt="logo" id="footer-logo"></a>
             </div>
         </footer>
     {% endif %}

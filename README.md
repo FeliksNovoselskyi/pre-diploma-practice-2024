@@ -48,12 +48,19 @@ python manage.py runserver
 - [FigJam](https://www.figma.com/board/Y5U9mctjukxSB2A5laDTnH/pre-diploma-practice-2024-FIGJAM?t=iRElZM5fwQltrSYK-1)
 
 ## Структура проекту
-- **DoctorProhorenkoClinic** - головна директорія, в якій задані налаштування для проекту.
-- **main** - додаток створенний для головної сторінки, та базового шаблону.
-- **services** - додаток створений для сторінок послуг та сторінки консультацій.
-- **auth_reg** - додаток створений для сторінок авторизації та реєстрації.
-- **contacts** - додаток створений для сторінки контактів.
-- **sertificates** - додаток створений для сторінки сертифікатів.
+```mermaid
+graph TD;
+    A[DoctorProhorenkoClinic] --> B[main] --> C[Додаток для 
+    головної сторінки];
+    A --> D[services] --> E[Додаток сторінок 
+    послуг та консультацій];
+    A --> F[auth_reg] --> G[Додаток для сторінок 
+    авторизації та реєстрації];
+    A --> H[contacts] --> I[Додаток для 
+    сторінки контактів];
+    A --> J[sertificates] --> K[Додаток для 
+    сторінки сертифікатів];
+```
 
 ## Функціонал проекту
 
@@ -359,6 +366,9 @@ def sertificates_view(request):
 
 ### Файл DoctorProhorenkoClinic/main/static/main/js/base.js
 
+![](readme_files/header_menu.gif)
+![](readme_files/footer_menu.gif)
+
 ```javascript
 // Отримуємо посилання на послуги в шапці та footer
 const sLink = document.querySelector('#service-link')
@@ -405,8 +415,11 @@ document.addEventListener('click', (event) => {
 })
 ```
 Отже, у цьому файлі виконується відкривання та закривання меню з послугами та консультаціями
+Ці файли забезпечують розгортання та згортання меню з посиланнями на сторінки послуг, завдяки цьому посилання у шапці не займають занадто багато міста, а користувач отримує зручне меню, за допомогою якого може перейти на потрібні йому сторінки
 
 ### Файл DoctorProhorenkoClinic/auth_reg/static/auth_reg/js/auth_reg.js
+
+![](readme_files/show_hide_password.gif)
 
 ```javascript
 // Отримуємо кнопку, яка перемикає бачення паролю
@@ -427,6 +440,7 @@ showHide.addEventListener('click', () => {
 })
 ```
 Отже, у цьому файлі виконується перемикання бачення паролю на сторінках авторизації та реєстрації
+Завдяки цьому файлу, користувач може швидко та легко продивить правильність введення свого паролю, якщо є помилки - виправити їх
 
 ## Моделі проекту
 
@@ -456,3 +470,5 @@ class Service3(models.Model):
     price = models.CharField(max_length=255)
 ```
 Містять в собі назви послуг та ціни на них
+
+##### Цей сайт є практичним проектом
