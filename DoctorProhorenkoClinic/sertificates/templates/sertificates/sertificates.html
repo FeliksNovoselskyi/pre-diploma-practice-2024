@@ -8,17 +8,30 @@
 
 {% block content %}
     <style>
-        @media (max-width: 480px) {
-                .form-input-div {width: 400px;}
-                .submit-btn {width:max-content;}
-            }
-
         #sertificate-main-block {    
             background: url("{% static 'sertificates/img/sertificates_bg_image.png' %}")
         }
 
         #block-sertificates {
-            background: no-repeat center/100% url("{% static 'sertificates/img/sertificates_page_image.png' %}");
+            background: no-repeat center/120% url("{% static 'sertificates/img/sertificates_page_image.png' %}");
+        }
+
+        @media (max-width: 600px) {
+                .form-input-div {width: 400px;}
+                .submit-btn {width:max-content;}
+
+                #block-sertificates {
+                    background: no-repeat center/180% url("{% static 'sertificates/img/sertificates_page_image.png' %}");
+                    max-width: 600px;
+                    height: 300px;
+                }
+        }
+
+        @media (min-width: 600px) and (max-width: 1200px) {
+            #block-sertificates {
+                background: no-repeat center/200% url("{% static 'sertificates/img/sertificates_page_image.png' %}");
+                height: 500px;
+            }
         }
     </style>
     <div id="block-sertificates">
@@ -30,34 +43,109 @@
 
     <div id="sertificate-main-block">
         <div class="sertificate">
-            <div class="temporarily-img-sertificate left"></div>
-
+            <img src="{% static 'main/img/sertificates_images/1.png' %}" alt="sertificate1" class="img-sertificate">
             <div class="sertificate-text">
-                <h2>Сертифікат Української асоціації лікарів-дерматовенерологів і косметологів</h2>
+                <h2>Застосування ботулотоксину Xeomin в ін'єкційній косметології</h2>
             </div>
         </div>
 
         <div class="sertificate">
-            <div class="temporarily-img-sertificate left"></div>
+            <img src="{% static 'main/img/sertificates_images/2.png' %}" alt="sertificate2" class="img-sertificate">
             <div class="sertificate-text">
-                <h2>Сертифікат Всеукраїнської асоціації трихологів</h2>
+                <h2>КОНФЕРЕНЦІЯ ВСЕ ПРО АКНЕ ТА ГОРМОНИ</h2>
             </div>
         </div>
 
         <div class="sertificate">
-            <div class="temporarily-img-sertificate left"></div>
-
+            <img src="{% static 'main/img/sertificates_images/3.png' %}" alt="sertificate3" class="img-sertificate">
             <div class="sertificate-text">
-                <h2>Сертифікат лікаря - спеціаліста</h2>
+                <h2>Учасника "Першого Міжнародного Конгресу Євро-Азіатської Асоціації Дерматовенерологів"</h2>
             </div>
         </div>
 
         <div class="sertificate">
-            <div class="temporarily-img-sertificate left"></div>
+            <img src="{% static 'main/img/sertificates_images/4.png' %}" alt="sertificate4" class="img-sertificate mobile-vertical">
+            <div class="sertificate-text">
+                <h2>Учасника курсу "Акне: сучасний підхід до діагностики, терапії, реабілітації"</h2>
+            </div>
+        </div>
+
+        <div class="sertificate">
+            <img src="{% static 'main/img/sertificates_images/5.png' %}" alt="sertificate4" class="img-sertificate mobile-vertical">
+            <div class="sertificate-text">
+                <h2>Сертифікат курсу bti. Human Technology</h2>
+            </div>
+        </div>
+
+        <div class="sertificate">
+            <img src="{% static 'main/img/sertificates_images/6.png' %}" alt="sertificate1" class="img-sertificate">
+            <div class="sertificate-text">
+                <h2>Сертифікат науково-практичної конференції "Можливі шляхи оптимізації програм лікування та ведения хворих у дерматовенрології"</h2>
+            </div>
+        </div>
+
+        <div class="sertificate">
+            <img src="{% static 'main/img/sertificates_images/7.png' %}" alt="sertificate2" class="img-sertificate">
+            <div class="sertificate-text">
+                <h2>Учасника семінару "Функціональна ботулінотерапія ботулінотерапія FULL FACE - гармонізація обличчя в балансі м'язів"</h2>
+            </div>
+        </div>
+
+        <div class="sertificate">
+            <img src="{% static 'main/img/sertificates_images/8.png' %}" alt="sertificate3" class="img-sertificate mobile-vertical2">
+            <div class="sertificate-text">
+                <h2>Сертифікат учасника Всеукраїнської науково-практичної конференції УАЛДВК з міжнародною участю "СУЧАСНІ ПІДХОДИ ДО ФОРМУВАННЯ КЛІНІЧНИХ НАСТАНОВ З ДІАГНОСТИКИ І ЛІКУВАННЯ ШКІРНИХ ЗАХВОРЮВАНЬ ТА ІНФЕКЦІЙ, ЩО ПЕРЕДАЮТЬСЯ СТАТЕВИМ ШЛЯХОМ: ЄВРОПЕЙСЬКИЙ ДОСВІД ТА УКРАЇНСЬКІ РЕАЛІЇ»"</h2>
+            </div>
+        </div>
+
+        <div class="sertificate">
+            <img src="{% static 'main/img/sertificates_images/9.png' %}" alt="sertificate4" class="img-sertificate">
             <div class="sertificate-text">
                 <h2>Сертифікат учасника регіональної науково-практичної конференції
                     “Прикарпатські дермотовенерологічні дні: Сучасні аспекти реформування
                     дерматовенерологічної служби”</h2>
+            </div>
+        </div>
+
+        <div class="sertificate">
+            <img src="{% static 'main/img/sertificates_images/10.png' %}" alt="sertificate4" class="img-sertificate">
+            <div class="sertificate-text">
+                <h2>INTERNATIONAL TRICHOSCOPY COURSE CERTIFICATE</h2>
+            </div>
+        </div>
+
+        <div class="sertificate">
+            <img src="{% static 'main/img/sertificates_images/11.png' %}" alt="sertificate1" class="img-sertificate">
+            <div class="sertificate-text">
+                <h2>Сертифікат учасника дводенного інтенсиву ТВІЙ ДЕРМАТОЛОГІЧНИЙ РЕБУС</h2>
+            </div>
+        </div>
+
+        <div class="sertificate">
+            <img src="{% static 'main/img/sertificates_images/12.png' %}" alt="sertificate2" class="img-sertificate">
+            <div class="sertificate-text">
+                <h2>Сертифікат члена Української асоціації ур лікарів-дерматовенерологів і косметологів</h2>
+            </div>
+        </div>
+
+        <div class="sertificate">
+            <img src="{% static 'main/img/sertificates_images/13.png' %}" alt="sertificate3" class="img-sertificate">
+            <div class="sertificate-text">
+                <h2>Сертифікат успішного завершення учбового курсу по трихології "ВСЕУКРАЇНСЬКА АСОЦІАЦІЯ ТРИХОЛОГІВ"</h2>
+            </div>
+        </div>
+
+        <div class="sertificate">
+            <img src="{% static 'main/img/sertificates_images/14.png' %}" alt="sertificate4" class="img-sertificate">
+            <div class="sertificate-text">
+                <h2>Сертифікат з участі у І міждисциплінарному саміті</h2>
+            </div>
+        </div>
+
+        <div class="sertificate">
+            <img src="{% static 'main/img/sertificates_images/15.png' %}" alt="sertificate4" class="img-sertificate">
+            <div class="sertificate-text">
+                <h2>RADIESSE CERTIFICATE MERZ-Academy of Advanced Aesthetics</h2>
             </div>
         </div>
     </div>
