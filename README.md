@@ -224,7 +224,6 @@ def reg_view(request):
                     User.objects.create_user(
                         username=username,
                         last_name=surname,
-                        # phone=phone, # Цей рядок закоментований, оскільки поле phone, можливо, не визначене в моделі User
                         email=email,
                         password=password,
                     )
