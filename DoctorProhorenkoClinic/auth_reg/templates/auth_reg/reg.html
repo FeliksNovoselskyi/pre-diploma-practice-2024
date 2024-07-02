@@ -4,7 +4,9 @@
 {% block links %}
     <link rel="stylesheet" href="{% static 'auth_reg/css/auth_and_reg.css' %}">
     <link rel="stylesheet" href="{% static 'auth_reg/css/auth_and_reg_adaptive.css' %}">
+
     <script src="{% static 'auth_reg/js/auth_reg.js' %}" defer></script>
+    <script src="{% static 'main/js/phone_valid.js' %}" defer></script>
 {% endblock %}
 
 {% block content %}
@@ -83,7 +85,7 @@
 
                     <div class="form-input-div">
                         <p class="typed-text">Ваш номер телефону</p>
-                        <input type="text" name="phone" class="form-input typed-text" value="{{phone_input}}">
+                        <input type="text" name="phone" class="form-input typed-text phone" value="{{phone_input}}">
                     </div>
 
                     <div class="form-input-div">
@@ -119,7 +121,7 @@
                 {% endif %}
 
 
-                <input type="submit" value="Підтвердити" class="submit-btn typed-text">
+                <input type="submit" value="Підтвердити" class="submit-btn typed-text" name="register_button">
             </form>
         </div>
     </div>

@@ -1,6 +1,4 @@
 @media (max-width: 600px) {
-
-
     .block-consultations {height: 190px;}
 
     .text-block {
@@ -34,8 +32,12 @@
     }
 
     .enroll-text {font-size: 17px;}
+
+    .prices-td {width: 100px;}
 }
 
 @media (min-width: 600px) and (max-width: 1200px) {
     .block-consultations{height: 500px;}
+
+    .prices-td {width: 150px;}
 }

@@ -2,7 +2,7 @@ from django.core.mail import send_mail
 import DoctorProhorenkoClinic.settings as settings
 
 def send_on_email(request):
-    if request.method == "POST":
+    if 'enroll_button' in request.POST:
         username = request.POST.get('username')
         surname = request.POST.get('surname')
         phone = request.POST.get('phone')

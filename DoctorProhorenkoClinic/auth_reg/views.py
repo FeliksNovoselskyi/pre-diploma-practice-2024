@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.db.utils import IntegrityError
 from main.models import *
+import utils
 
 # Create your views here.
 def auth_view(request):
@@ -39,6 +40,8 @@ def auth_view(request):
         logout(request)
         return redirect('auth_page')
     
+    utils.send_on_email(request)
+    
     return render(request, 'auth_reg/auth.html', context)
 
 def reg_view(request):
@@ -51,7 +54,7 @@ def reg_view(request):
         context['username'] = request.user.username
         context['signed_in'] = True
     
-    if request.method == 'POST':
+    if 'register_button' in request.POST:
         username = request.POST.get('username')
         surname = request.POST.get('surname')
         phone = request.POST.get('phone')
@@ -84,5 +87,7 @@ def reg_view(request):
                 context['error'] = 'Пароль занадто малий'
         else:
             context['error'] = 'Заповніть усі поля'
+            
+    utils.send_on_email(request)
     
     return render(request, 'auth_reg/reg.html', context)
