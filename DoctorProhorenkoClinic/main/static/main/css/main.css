@@ -424,7 +424,12 @@ main {
 .slider-img {
     filter: brightness(90%);
     height: 700px;
+    object-fit: cover;
 }
+
+.slider-img.first-si {object-position: center;}
+.slider-img.second-si {object-position: center;}
+.slider-img.third-si {object-position: top;}
 
 #consultation-text-types-block {
     display: flex;
