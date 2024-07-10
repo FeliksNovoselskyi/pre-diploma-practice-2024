@@ -115,28 +115,3 @@ main {
 .form-block.reg form {
     gap: 5px;
 }
-
-.hints{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 5px;
-    color: #666666;
-}
-
-.dot {
-    height: 8px;
-    width: 8px;
-    background-color: #b0b0b0;
-    border-radius: 50%;
-    display: inline-block;
-    line-height: 0%;
-}
-
-.password-hints {
-    width: 100%;
-    flex-direction: column;
-    display: flex;
-    gap: 10px;
-}

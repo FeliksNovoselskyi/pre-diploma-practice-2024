@@ -232,7 +232,7 @@ main {
     gap: 30px;
 }
 
-.hints{
+.f-hints{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -241,7 +241,7 @@ main {
     color: #666666;
 }
 
-.dot {
+.f-dot {
     height: 8px;
     width: 8px;
     background-color: #666666;
@@ -250,7 +250,7 @@ main {
     line-height: 0%;
 }
 
-.hints-text {
+.f-hints-text {
     font-size: 18px;
     color: #000;
     line-height: 0%;
@@ -286,11 +286,6 @@ main {
     transition: all 300ms ease-in-out;
 }
 
-/* .dark-btn:hover {
-    background-color: transparent;
-    color: #000;
-} */
-
 .small-dark-btn {
     background-color: #000;
     color: #FFFF;
@@ -302,9 +297,10 @@ main {
 }
 
 .temporarily-img {
-    width: 220px;
+    width: 225px;
     height: 280px;
     border-radius: 10px;
+    border: 1px solid black;
 }
 
 #doctor-info {
@@ -375,7 +371,7 @@ main {
     display: flex;
     flex-direction: column;
     padding: 40px;
-    width: 500px;
+    width: 635px;
     gap: 10px;
     background-color: rgba(172, 172, 172, 0.4);
     color: #FFFF;
@@ -383,6 +379,7 @@ main {
     box-shadow: 0 0 20px #000;
     backdrop-filter: blur(5px);
 }
+
 
 .c-type h2 {font-size: 32px;}
 

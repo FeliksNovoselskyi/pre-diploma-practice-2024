@@ -43,17 +43,27 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     width: 100%;
     gap: 10px;
     padding: 10px 0;
 }
 
 .img-sertificate {
-    height: 500px;
+    height: 558px;
+    width: 40%;
     background-color: #C0C0C0;
+    box-shadow: 0 0 10px #000;
+}
+
+.img-sertificate.left-s {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+
+.img-sertificate.right-s {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 
@@ -63,6 +73,9 @@ main {
     align-items: flex-start;
     justify-content: center;
     width: 50%;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-.sertificate-text h2 {font-size: 28px;}
+.sertificate-text h1 {font-size: 32px;}
+.sertificate-text p {font-size: 26px;}

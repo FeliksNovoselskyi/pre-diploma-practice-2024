@@ -455,16 +455,47 @@ showHide.addEventListener('click', () => {
 ```javascript
 // Очікуємо, коли DOM буде повністю завантажений
 document.addEventListener("DOMContentLoaded", function() {
-    // Застосовуємо маску до поля введення з класом "phone"
+    // Масив допустимих кодів операторів
+    const validOperators = ["50", "63", "66", "67", "68", "70", "73", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99"];
+
+    // Застосування маски до поля введення телефону
     $(".phone").inputmask({
-        // Задаємо маску введення для українського номера телефону
-        mask: "+38(999)999-99-99",
-        // Символ, який буде відображатися замість відсутніх цифр
-        placeholder: "_",
-        // Вимикаємо показ маски під час наведення миші
-        showMaskOnHover: false,
-        // Вмикаємо показ маски при фокусуванні на полі введення
-        showMaskOnFocus: true
+        mask: "+380(99)999-99-99", // Маска введення для українських номерів телефонів
+        placeholder: "_", // Символ-заповнювач
+        showMaskOnHover: false, // Не показувати маску при наведенні миші
+        showMaskOnFocus: true, // Показувати маску при фокусі на полі
+        onincomplete: function() {
+            // Очищення поля, якщо номер введено не повністю
+            $(this).val("");
+        },
+        oncomplete: function() {
+            // Отримання коду оператора з введеного номера
+            const operatorCode = $(this).val().slice(5, 7);
+            
+            // Перевірка, чи входить код оператора в допустимий список
+            if (!validOperators.includes(operatorCode)) {
+                // Очищення поля, якщо код оператора недопустимий
+                $(this).val("");
+            }
+        }
+    });
+
+    // Обробка відправлення форми
+    $("#enroll-form").on("submit", function(event) {
+        // Отримання значень полів форми
+        const usernameValue = $("input[name='username']").val();
+        const surnameValue = $("input[name='surname']").val();
+        const phoneValue = $("input[name='phone']").val();
+        
+        // Перевірка, що номер телефону введено повністю
+        if (phoneValue.length < 17) {
+            event.preventDefault(); // Запобігання відправленню форми
+        }
+
+        // Перевірка, що поля імені та прізвища не порожні
+        if (usernameValue.length < 1 || surnameValue.length < 1) {
+            event.preventDefault(); // Запобігання відправленню форми
+        }
     });
 });
 ```

@@ -144,7 +144,7 @@
                         <div class="footer-info-text">
                             <p class="footer-h">Зв'язок</p>
                             <div class="footer-links">
-                                <p class="footer-p">Інна Прохоренко</p>
+                                <p class="footer-p name">Інна Прохоренко</p>
 
                                 <div class="linkage">
                                     <img src="{% static 'main/img/phone.png' %}" alt="phone" class="footer-icons">
@@ -192,7 +192,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="" method="POST">
+                    <form action="" method="POST" id="enroll-form">
                         {% csrf_token %}
                         <div class="form-input-div">
                             <p class="typed-text">Ваше ім'я</p>
@@ -207,6 +207,16 @@
                         <div class="form-input-div">
                             <p class="typed-text">Ваш номер телефону</p>
                             <input type="text" name="phone" class="form-input typed-text phone">
+                        </div>
+                        <div class="password-hints">
+                            <div class="hints">
+                                <span class="dot"></span>
+                                <p class="small-text enroll-hint-text">Допустимі коди операторів: 50, 63, 66, 67, 68, 70, 73, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99</p>
+                            </div>
+                            <div class="hints">
+                                <span class="dot"></span>
+                                <p class="small-text enroll-hint-text">Усі поля мають бути заповнені повністю</p>
+                            </div>
                         </div>
 
                         <input type="submit" value="Записатись" class="submit-btn typed-text" name="enroll_button">

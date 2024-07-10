@@ -28,6 +28,11 @@ body {margin: 0;}
     line-height: 0%;
 }
 
+.small-text.enroll-hint-text {
+    line-height: 100%;
+    max-width: 400px;
+}
+
 header {
     display: flex;
     flex-direction: row;
@@ -214,6 +219,8 @@ footer iframe {
     color: #9B9B9B;
 }
 
+.footer-p.name {margin-top: 10px;}
+
 .footer-p.text {
     margin-bottom: 0;
 }
@@ -264,4 +271,30 @@ footer iframe {
 #footer-info-text-block {
     display: flex;
     gap: 50px;
+}
+
+.hints{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    color: #666666;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    background-color: #b0b0b0;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 0%;
+}
+
+.password-hints {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+    width: 418px;
 }
