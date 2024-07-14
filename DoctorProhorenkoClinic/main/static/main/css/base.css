@@ -298,3 +298,9 @@ footer iframe {
     gap: 10px;
     width: 418px;
 }
+
+.form-input.addit-info {
+    resize: none;
+    overflow: auto;
+    height: 87px;
+}

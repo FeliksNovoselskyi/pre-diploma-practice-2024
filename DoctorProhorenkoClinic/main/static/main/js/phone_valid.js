@@ -21,14 +21,13 @@ document.addEventListener("DOMContentLoaded", function() {
     $("#enroll-form").on("submit", function(event) {
         const usernameValue = $("input[name='username']").val();
         const surnameValue = $("input[name='surname']").val();
+        const emailValue = $("input[name='email']").val();
         const phoneValue = $("input[name='phone']").val();
         
-        if (phoneValue.length < 17) {
+        if (phoneValue.length < 17 || usernameValue.length < 1 || surnameValue.length < 1 || emailValue.length < 1) {
             event.preventDefault();
-        }
-
-        if (usernameValue.length < 1 || surnameValue.length < 1) {
-            event.preventDefault();
+        } else {
+            $(".suc-enroll-modal").modal("show");
         }
     });
 });

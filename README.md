@@ -108,20 +108,43 @@ import DoctorProhorenkoClinic.settings as settings # Імпортуємо нал
 # Створюємо функцію, яка відправляє запис на пошту
 def send_on_email(request):
     # Перевіряємо, чи є метод запиту POST (тобто форма була відправлена)
-    if request.method == "POST":
+    if 'enroll_button' in request.POST:
         # Отримуємо з форми для запису введену користувачем інформацію
         username = request.POST.get('username')
         surname = request.POST.get('surname')
+        email = request.POST.get('email')
         phone = request.POST.get('phone')
+        additionally_info = request.POST.get('additionally-info')
 
         # Перевіряємо, чи була заповнена форма
-        if username and surname and phone:
-            # Відправляємо запис на пошту використовуючи функцію send_mail
-            send_mail(subject='enroll', # Вказуємо тему листу
-                    message=f'{username} {surname} має потребу у ваших послугах. Його/Її номер телефону: {phone}', # Формуємо текст повідомлення
-                    from_email=settings.EMAIL_HOST_USER, # Вказуємо адресу відправника листа, беручи її з файлу settings
-                    recipient_list=['doctorprohorenkoclinic@gmail.com', settings.EMAIL_HOST_USER] # Вказуємо отримувача листа з записом
-            )
+        if username and surname and email and phone:
+            # Перевіряємо, чи додав користувач коментар
+            if additionally_info:
+                # Відправляємо запис на пошту менеджеру використовуючи функцію send_mail
+                send_mail(subject='enroll',
+                        message=f'{username} {surname} має потребу у ваших послугах. Його/Її номер телефону: {phone} \nДодатковий коментар користувача: {additionally_info}',
+                        from_email=settings.EMAIL_HOST_USER,
+                        recipient_list=['doctorprohorenkoclinic@gmail.com', settings.EMAIL_HOST_USER]
+                )
+                # Відправляємо запис на пошту користувачу використовуючи функцію send_mail
+                send_mail(subject='enroll',
+                        message=f'Ви записались на прийом у клініці Доктора Прохоренко. \nВами було заповнено форму, ви ввели до неї: \nІм\'я: {username} \nПрізвище: {surname} \nПошту: {email} \nНомер телефону: {phone} \nДодатковий коментар: {additionally_info}',
+                        from_email=settings.EMAIL_HOST_USER,
+                        recipient_list=[email]
+                )
+            else:
+                # Відправляємо запис на пошту менеджеру використовуючи функцію send_mail, але без додаткового коментаря
+                send_mail(subject='enroll',
+                        message=f'{username} {surname} має потребу у ваших послугах. Його/Її номер телефону: {phone} \nДодатковий коментар: не був вказаний',
+                        from_email=settings.EMAIL_HOST_USER,
+                        recipient_list=['doctorprohorenkoclinic@gmail.com', settings.EMAIL_HOST_USER]
+                )
+                # Відправляємо запис на пошту користувачу використовуючи функцію send_mail, але без додаткового коментаря
+                send_mail(subject='enroll',
+                        message=f'Ви записались на прийом у клініці Доктора Прохоренко. \nВами було заповнено форму, ви ввели до неї: \nІм\'я: {username} \nПрізвище: {surname} \nПошту: {email} \nНомер телефону: {phone} \nДодатковий коментар: не був вказаний',
+                        from_email=settings.EMAIL_HOST_USER,
+                        recipient_list=[email]
+                )
 ```
 
 Отже цей файл забезпечує відправлення записів на пошту, створюючи функцію, яку можна використати у будь-якому файлі проекту.
@@ -485,16 +508,15 @@ document.addEventListener("DOMContentLoaded", function() {
         // Отримання значень полів форми
         const usernameValue = $("input[name='username']").val();
         const surnameValue = $("input[name='surname']").val();
+        const emailValue = $("input[name='email']").val();
         const phoneValue = $("input[name='phone']").val();
         
-        // Перевірка, що номер телефону введено повністю
-        if (phoneValue.length < 17) {
+        // Перевірка, що номер телефону введено повністю, та що поля імені та прізвища не порожні
+        if (phoneValue.length < 17 || usernameValue.length < 1 || surnameValue.length < 1 || emailValue.length < 1) {
             event.preventDefault(); // Запобігання відправленню форми
-        }
-
-        // Перевірка, що поля імені та прізвища не порожні
-        if (usernameValue.length < 1 || surnameValue.length < 1) {
-            event.preventDefault(); // Запобігання відправленню форми
+        } else {
+            // Якщо усі обов'язкові поля форми для запису були заповнені, відкривається модальне вікно с інформацією про успішний запис
+            $(".suc-enroll-modal").modal("show");
         }
     });
 });

@@ -203,11 +203,22 @@
                             <p class="typed-text">Ваше прізвище</p>
                             <input type="text" name="surname" class="form-input typed-text">
                         </div>
+
+                        <div class="form-input-div">
+                            <p class="typed-text">Ваша пошта</p>
+                            <input type="email" name="email" class="form-input typed-text">
+                        </div>
     
                         <div class="form-input-div">
                             <p class="typed-text">Ваш номер телефону</p>
                             <input type="text" name="phone" class="form-input typed-text phone">
                         </div>
+
+                        <div class="form-input-div">
+                            <p class="typed-text">Додатковий коментар (Необов'язково)</p>
+                            <textarea id="additionally-info" name="additionally-info" class="form-input addit-info form-control" cols="30" rows="10" maxlength="200"></textarea>
+                        </div>
+
                         <div class="password-hints">
                             <div class="hints">
                                 <span class="dot"></span>
@@ -215,12 +226,26 @@
                             </div>
                             <div class="hints">
                                 <span class="dot"></span>
-                                <p class="small-text enroll-hint-text">Усі поля мають бути заповнені повністю</p>
+                                <p class="small-text enroll-hint-text">Усі обов'язкові поля мають бути заповнені повністю</p>
                             </div>
                         </div>
 
                         <input type="submit" value="Записатись" class="submit-btn typed-text" name="enroll_button">
                     </form>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="modal fade suc-enroll-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="background-color: #dbdbdb32; backdrop-filter: blur(5px);">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Ви успішно записались</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>На вашу пошту буде надіслано інформацію про запис</p>
                 </div>
             </div>
         </div>
